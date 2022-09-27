@@ -1,0 +1,122 @@
+@charset "utf-8";
+@import "./style.scss";
+
+#wrap{
+    #header{
+        width: 100%;
+        box-sizing: border-box;
+        .container{
+            h2.header-logo-login{
+                width: 350px;
+                margin: 0 auto;
+                padding: 11px 0;
+                a{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            span{
+                a{
+                    font-size: 40px;
+                    color: $grey;
+                    i{}
+                }
+            }
+        }
+    }
+    #section1-login{
+        width: 100%;
+        padding-top: 70px;
+        padding-bottom: 100px;
+        .container{
+            .login-inner{
+                text-align: center;
+                label{display: none;}
+                input{
+                    display: inline-block;
+                    width: 340px;
+                    height: 45px;
+                    border-radius: 10px;
+                    background: $white;
+                    border: 1px solid $grey;
+                    padding-left: 20px;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                }
+                button{
+                    width: 340px;
+                    height: 45px;
+                    cursor: pointer;
+                    text-align: center;
+                    border-radius: 10px;
+                    background: $color3;
+                    color: $white;
+                    font-size: $fs16;
+                    font-weight: 500;
+                    margin-top: 5px;
+                }
+                .login-find{
+                    margin-top: 15px;
+                    .login-find-box{
+                        width: 225px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        vertical-align: middle;
+                        margin: 0 auto;
+                        li{
+                            a{}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #section2-login{
+        width: 100%;
+        .container{
+            p{
+                position: relative;
+                color: $grey;
+                font-size: $fs12;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p:before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 120px;
+                height: 1px;
+                background: $grey;
+            }
+            p:after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 120px;
+                height: 1px;
+                background: $grey;
+            }
+            .sns-login-box{
+                .sns-login{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    vertical-align: middle;
+                    li{
+                        a{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

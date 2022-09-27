@@ -1,0 +1,152 @@
+@charset "utf-8";
+@import "./style.scss";
+
+#wrap{
+    #headerCart{
+        width: 100%;
+        border-bottom: 1px solid $grey;
+        .container{
+            display: flex;
+            height: 70px;
+            vertical-align: middle;
+            align-items: center;
+            a{font-size: 26px; color: $grey; margin-right: 15px;}
+            p{font-size: $fs16; color: $color1; font-weight: 500;}
+        }
+    }
+    #sectionCart1{
+        width: 100%;
+        .container{
+            padding: 0;
+            .cart-boxs{
+                border-bottom: 1px solid $grey;
+                box-sizing: border-box;
+                .cart-box{
+                    padding: 35px 20px;
+                    box-sizing: border-box;
+                    .cart-top{
+                        display: flex;
+                        justify-content: space-between;
+                        .cart-top-left{
+                            display: flex;
+                            .sh-img{
+                                width: 70px;
+                                height: 70px;
+                                img{width: 100%;}
+                            }
+                            p{
+                                margin-left: 20px;
+                                font-size: $fs16;
+                                color: $black;
+                                font-weight: 500;
+                            }
+                        }
+                        .cart-top-right{
+                            a{
+                                color: $grey;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .cart-bottom{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 20px;
+                        .more-box{
+                            width: 100px;
+                            height: 30px;
+                            box-sizing: border-box;
+                            background: $grey-light;
+                            border: 2px solid $color1;
+                            border-radius: 3px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            vertical-align: middle;
+                            .plmi-box{
+                                width: 30px;
+                                height: 100%;
+                                background: $white;
+                                border-radius: 3px;
+                                font-size: 14px;
+                                a{
+                                    color: $color1;
+                                    height: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                            p{
+                                font-size: $fs16;
+                                font-weight: 500;
+                                color: $black;
+                            }
+                        }
+                        p{
+                            font-size: $fs16; color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sectionCart2{
+        position: relative;
+        bottom: -95px;
+        padding-bottom: 100px;
+        .container{
+            .calculation-box{
+                position: relative;
+                border-radius: 10px;
+                width: 100%;
+                height: 200px;
+                background: $grey-light;
+                padding: 25px 20px;
+                box-sizing: border-box;
+                span{
+                    font-size: $fs16;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+                    p.totalamount{
+                        color: $grey-dark;
+                    }
+                    p.total{
+                        color: $black;
+                        font-weight: 500;
+                    }
+                    &.last-total{
+                        margin-bottom: 0;
+                        margin-top: 30px;
+                        position: relative;
+                    }
+                    &.last-total::before{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background: $grey;
+                        position: absolute;
+                        top: -15px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                button{
+                    cursor: pointer;
+                    background: $color1;
+                    width: 100%;
+                    height: 45px;
+                    border-radius: 10px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: $fs20;
+                    color: $white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

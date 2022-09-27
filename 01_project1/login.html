@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+
+    <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/loginstyle.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <!-- 헤더영역 -->
+    <div id="header">
+        <div class="header_top">
+            <div class="container">
+                <div class="site_list">
+                    <ul>
+                        <li><a href="#" target="_blank" title="챗봇상담">챗봇상담</a></li>
+                        <li><a href="#" target="_blank" title="용인시의회">용인시의회</a></li>
+                        <li><a href="#" target="_blank" title="아동시청">아동시청</a></li>
+                        <li><a href="#" target="_blank" title="아동돌봄플랫폼">아동돌봄플랫폼</a></li>
+                        <li><a href="#" target="_blank" title="청년Lab">청년Lab</a></li>
+                        <li><a href="#" target="_blank" title="공공데이터">공공데이터</a></li>
+                    </ul>
+                </div>
+                <div class="right_area">
+                    <div class="login">
+                        <ul>
+                            <li><a href="./login.html" title="로그인">로그인</a></li>
+                            <li><a href="./join.html" title="회원가입">회원가입</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn_print">
+                        <a href="#" target="_blank" title="프린트하기" class="ir_pm">프린트하기</a>
+                    </div>
+                    <div class="maginfy">
+                        <dl>
+                            <dt>화면</dt>
+                            <dd><a href="#"><img src="./img/txt_plus_icon.png" alt="글자크기 확대"></a></dd>
+                            <dd><a href="#"><img src="./img/txt_minus_icon.png" alt="글자크기 축소"></a></dd>
+                        </dl>
+                    </div>
+                    <div class="language">
+                        <button type="button" title="언어선택 열기">언어선택</button>
+                        <div class="lang_list">
+                            <ul>
+                                <li><a href="#" title="한국어">한국어</a></li>
+                                <li><a href="#" title="영어">English</a></li>
+                                <li><a href="#" title="중국어">中國語</a></li>
+                                <li><a href="#" title="일본어">日本語</a></li>
+                            </ul>
+                            <button type="button" title="언어선택 닫기">언어선택 닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_body">
+            <div class="container">
+                <h1 id="logo">
+                    <a href="./indexre.html"><img src="./img/logo.png" alt="용인시청"></a>
+                </h1>
+                <div id="gub_area">
+                    <ul id="gub">
+                        <li><a href="#" title="용인소식">용인소식</a>
+                            <div class="gub_menu">
+                                <div class="gub_menu_inner">
+                                    <div class="gub_menu_tit">
+                                        <h4>용인소식</h4>
+                                        <p>용인시의 시정정보와<br>새로운소식</p>
+                                        <img src="./img/gnb_img01.png" alt="용인소식">
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="새소식">새소식</a>
+                                            <ul>
+                                                <li><a href="#" title="시정소식">시정소식</a></li>
+                                                <li><a href="#" title="도정소식">도정소식</a></li>
+                                                <li><a href="#" title="경기도민생범죄통계">경기도민생범죄통계</a></li>
+                                                <li><a href="#" title="언론보도">언론보도</a></li>
+                                                <li><a href="#" title="문화행사/공연">문화행사/공연</a></li>
+                                                <li><a href="#" title="공모사업">공모사업</a></li>
+                                                <li><a href="#" title="채용/시험정보">채용/시험정보</a></li>
+                                                <li><a href="#" title="코로나19관련소식">코로나19관련소식</a></li>
+                                                <li><a href="#" title="공모전 작품 갤러리">공모전 작품 갤러리</a></li>
+                                                <li><a href="#" title="용인소식지">용인소식지</a></li>
+                                                <li><a href="#" title="용인시 e-book">용인시 e-book</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="입법예고/공고">입법예고/공고</a>
+                                            <ul>
+                                                <li><a href="#" title="입법예고">입법예고</a></li>
+                                                <li><a href="#" title="고시공고">고시공고</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="입찰계약정보">입찰계약정보</a>
+                                            <ul>
+                                                <li><a href="#" title="입찰공고">입찰공고</a></li>
+                                                <li><a href="#" title="수의계약내역 공개방">수의계약내역 공개방</a></li>
+                                                <li><a href="#" title="용인시 계약정보공개 시스템">용인시 계약정보공개 시스템</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#" title="민원안내">민원안내</a>
+                            <div class="gub_menu">
+                                <div class="gub_menu_inner">
+                                    <div class="gub_menu_tit">
+                                        <h4>민원안내</h4>
+                                        <p>편리한<br>민원행정서비스</p>
+                                        <img src="./img/gnb_img02.png" alt="민원안내">
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="종합민원안내">종합민원안내</a>
+                                            <ul>
+                                                <li><a href="#" title="무인민원발급창구안내">무인민원발급창구안내</a></li>
+                                                <li><a href="#" title="어디서나민원안내">어디서나민원안내</a></li>
+                                                <li><a href="#" title="주민등록민원안내">주민등록민원안내</a></li>
+                                                <li><a href="#" title="민원1회 방문제">민원1회 방문제</a></li>
+                                                <li><a href="#" title="군부대 민원안내">군부대 민원안내</a></li>
+                                                <li><a href="#" title="정보통신공사 사용전검사">정보통신공사 사용전검사</a></li>
+                                                <li><a href="#" title="공공요금 모아보기">공공요금 모아보기</a></li>
+                                                <li><a href="#" title="해피 민원창구 운영">해피 민원창구 운영</a></li>
+                                                <li><a href="#" title="폐업신고 일괄서비스">폐업신고 일괄서비스</a></li>
+                                                <li><a href="#" title="민원안내 콜센터">민원안내 콜센터</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="세금정보">세금정보</a>
+                                            <ul>
+                                                <li><a href="#" title="지방세">지방세</a></li>
+                                                <li><a href="#" title="세외수입">세외수입</a></li>
+                                                <li><a href="#" title="편리한납부방법">편리한납부방법</a></li>
+                                                <li><a href="#" title="세무부서안내">세무부서안내</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="여권사무">여권사무</a>
+                                            <ul>
+                                                <li><a href="#" title="입찰공고">여권민원실 안내</a></li>
+                                                <li><a href="#" title="여권개요 및 유의사항">여권개요 및 유의사항</a></li>
+                                                <li><a href="#" title="여권사진 규정 안내">여권사진 규정 안내</a></li>
+                                                <li><a href="#" title="여권구비서류">여권구비서류</a></li>
+                                                <li><a href="#" title="여권발급수수료">여권발급수수료</a></li>
+                                                <li><a href="#" title="여권수령방법 및 여권 발급기한">여권수령방법 및 여권 발급기한</a></li>
+                                                <li><a href="#" title="여권보관, 반납 및 습득">여권보관, 반납 및 습득</a></li>
+                                                <li><a href="#" title="여권신청 관련서식">여권신청 관련서식</a></li>
+                                                <li><a href="#" title="목요 야간여권민원실">목요 야간여권민원실</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="민원편함/서식">민원편함/서식</a>
+                                            <ul>
+                                                <li><a href="#" title="민원편람">민원편람</a></li>
+                                                <li><a href="#" title="민원서식">민원서식</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="민원신청">민원신청</a>
+                                            <ul>
+                                                <li><a href="#" title="민원신청 바로가기">민원신청 바로가기</a></li>
+                                                <li><a href="#" title="정부24">정부24</a></li>
+                                                <li><a href="#" title="온라인 행정심판청구">온라인 행정심판청구</a></li>
+                                                <li><a href="#" title="안전신문고">안전신문고</a></li>
+                                                <li><a href="#" title="민원사전상담/예약">민원사전상담/예약</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="행정서비스현장">행정서비스현장</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#" title="정보공개">정보공개</a>
+                            <div class="gub_menu">
+                                <div class="gub_menu_inner">
+                                    <div class="gub_menu_tit">
+                                        <h4>정보공개</h4>
+                                        <p>국민의 알권리충족<br>공공정보 공개</p>
+                                        <img src="./img/gnb_img03.png" alt="정보공개">
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="시정정보">시정정보</a>
+                                            <ul>
+                                                <li><a href="#" title="용인시보">용인시보</a></li>
+                                                <li><a href="#" title="용인시정백서">용인시정백서</a></li>
+                                                <li><a href="#" title="용인시 주요업무보고">용인시 주요업무보고</a></li>
+                                                <li><a href="#" title="중장기 시정운영 계획">중장기 시정운영 계획</a></li>
+                                                <li><a href="#" title="자치법규">자치법규</a></li>
+                                                <li><a href="#" title="정책실명제">정책실명제</a></li>
+                                                <li><a href="#" title="달라지는 행정제도">달라지는 행정제도</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="행정정보공개">행정정보공개</a>
+                                            <ul>
+                                                <li><a href="#" title="사전정보공표">사전정보공표</a></li>
+                                                <li><a href="#" title="공공와이파이 설치 현황">공공와이파이 설치 현황</a></li>
+                                                <li><a href="#" title="정보공개제도">정보공개제도</a></li>
+                                                <li><a href="#" title="정보목록 바로가기">정보목록 바로가기</a></li>
+                                                <li><a href="#" title="비공개 대상정보 세부기준">비공개 대상정보 세부기준</a></li>
+                                                <li><a href="#" title="공공데이터개방">공공데이터개방</a></li>
+                                                <li><a href="#" title="지방행정데이터개방">지방행정데이터개방</a></li>
+                                                <li><a href="#" title="공유재산정보공개">공유재산정보공개</a></li>
+                                                <li><a href="#" title="업무추진비공개">업무추진비공개</a></li>
+                                                <li><a href="#" title="인허가 처리 이력">인허가 처리 이력</a></li>
+                                                <li><a href="#" title="조직운영 핵심지표(5대)공개">조직운영 핵심지표(5대)공개</a></li>
+                                                <li><a href="#" title="용역과제 결과공개">용역과제 결과공개</a></li>
+                                                <li><a href="#" title="개인정보 위탁현황">개인정보 위탁현황</a></li>
+                                                <li><a href="#" title="개인정보 목적외 이용 및 제3자 제공">개인정보 목적외 이용 및 제3자 제공</a></li>
+                                                <li><a href="#" title="국외출장연수 자료실">국외출장연수 자료실</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="재정운영현황">재정운영현황</a>
+                                            <ul>
+                                                <li><a href="#" title="예산서 안내">예산서 안내</a></li>
+                                                <li><a href="#" title="예산서공개">예산서공개</a></li>
+                                                <li><a href="#" title="결산서공개">결산서공개</a></li>
+                                                <li><a href="#" title="재정공시">재정공시</a></li>
+                                                <li><a href="#" title="중기지방재정계획">중기지방재정계획</a></li>
+                                                <li><a href="#" title="지방재정투자사업">지방재정투자사업</a></li>
+                                                <li><a href="#" title="민간투자사업">민간투자사업</a></li>
+                                                <li><a href="#" title="세입세출예산공개">세입세출예산공개</a></li>
+                                                <li><a href="#" title="기금운용계획">기금운용계획</a></li>
+                                                <li><a href="#" title="채무관리계획">채무관리계획</a></li>
+                                                <li><a href="#" title="예산 성과계획서">예산 성과계획서</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="감사">감사</a>
+                                            <ul>
+                                                <li><a href="#" title="열린감사">열린감사</a></li>
+                                                <li><a href="#" title="청렴용인">청렴용인</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="공공시설물 예약">공공시설물 예약</a>
+                                            <ul>
+                                                <li><a href="#" title="컨벤션홀">컨벤션홀</a></li>
+                                                <li><a href="#" title="시청사 1층광장">시청사 1층광장</a></li>
+                                                <li><a href="#" title="체육시설예약">체육시설예약</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="공공체육시설">공공체육시설</a>
+                                            <ul>
+                                                <li><a href="#" title="공공체육시설안내">공공체육시설안내</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#" title="시민참여">시민참여</a>
+                            <div class="gub_menu">
+                                <div class="gub_menu_inner">
+                                    <div class="gub_menu_tit">
+                                        <h4>시민참여</h4>
+                                        <p>시민의, 시민을 위한<br>소통광장</p>
+                                        <img src="./img/gnb_img04.png" alt="시민참여">
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="시민신고센터">시민신고센터</a>
+                                            <ul>
+                                                <li><a href="#" title="칭찬합니다">칭찬합니다</a></li>
+                                                <li><a href="#" title="불법 사금융 피해 신고센터">불법 사금융 피해 신고센터</a></li>
+                                                <li><a href="#" title="부패·공익신고">부패·공익신고</a></li>
+                                                <li><a href="#" title="부정불량식품신고">부정불량식품신고</a></li>
+                                                <li><a href="#" title="예산낭비신고">예산낭비신고</a></li>
+                                                <li><a href="#" title="부동산불법중개행위신고">부동산불법중개행위신고</a></li>
+                                                <li><a href="#" title="부동산거래질서교란행위신고">부동산거래질서교란행위신고</a></li>
+                                                <li><a href="#" title="민원모니터">민원모니터</a></li>
+                                                <li><a href="#" title="지방세 탈루/체납자의 은닉재산 신고">지방세 탈루/체납자의 은닉재산 신고</a></li>
+                                                <li><a href="#" title="용인시직장운동경기부 인권침해 신고센터">용인시직장운동경기부 인권침해 신고센터</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="주민참여예산">주민참여예산</a>
+                                            <ul>
+                                                <li><a href="#" title="제도안내">제도안내</a></li>
+                                                <li><a href="#" title="운영계획">운영계획</a></li>
+                                                <li><a href="#" title="관련법령">관련법령</a></li>
+                                                <li><a href="#" title="주민참여예산기구">주민참여예산기구</a></li>
+                                                <li><a href="#" title="주민참여예산 토론방">주민참여예산 토론방</a></li>
+                                                <li><a href="#" title="예산편성에 바란다">예산편성에 바란다</a></li>
+                                                <li><a href="#" title="예산의이해">예산의이해</a></li>
+                                                <li><a href="#" title="예산학교신청">예산학교신청</a></li>
+                                                <li><a href="#" title="공지사항">공지사항</a></li>
+                                                <li><a href="#" title="자료실">자료실</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="시민제안/토론">시민제안/토론</a>
+                                            <ul>
+                                                <li><a href="#" title="시민제안">시민제안</a></li>
+                                                <li><a href="#" title="설문조사">설문조사</a></li>
+                                                <li><a href="#" title="자유발언대">자유발언대</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="온라인신청접수">온라인신청접수</a>
+                                            <ul>
+                                                <li><a href="#" title="교복지원금 신청">교복지원금 신청</a></li>
+                                                <li><a href="#" title="실내 라돈측정기 대여신청">실내 라돈측정기 대여신청</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="규제개혁/적극행정">규제개혁/적극행정</a>
+                                            <ul>
+                                                <li><a href="#" title="규제개혁이란">규제개혁이란</a></li>
+                                                <li><a href="#" title="행정규제등록현황">시청사 1층광장</a></li>
+                                                <li><a href="#" title="용인시규제신고센터">용인시규제신고센터</a></li>
+                                                <li><a href="#" title="규제입증 시민요청">규제입증 시민요청</a></li>
+                                                <li><a href="#" title="알림 및 자료실">알림 및 자료실</a></li>
+                                                <li><a href="#" title="적극행정/소극행정">적극행정/소극행정</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="민관협치">민관협치</a>
+                                            <ul>
+                                                <li><a href="#" title="제도안내">제도안내</a></li>
+                                                <li><a href="#" title="주요사업">주요사업</a></li>
+                                                <li><a href="#" title="공지사항">공지사항</a></li>
+                                                <li><a href="#" title="자료실">자료실</a></li>
+                                                <li><a href="#" title="협치 정책 제안">협치 정책 제안</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="용인시 위원회">용인시 위원회</a>
+                                            <ul>
+                                                <li><a href="#" title="용인시 위원회 안내">용인시 위원회 안내</a></li>
+                                                <li><a href="#" title="위원회 회의록">위원회 회의록</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#" title="용인소개">용인소개</a>
+                            <div class="gub_menu">
+                                <div class="gub_menu_inner">
+                                    <div class="gub_menu_tit">
+                                        <h4>용인소개</h4>
+                                        <p>사람중심,<br>새로운 용인</p>
+                                        <img src="./img/gnb_img05.png" alt="용인소개">
+                                    </div>
+                                    <ul>
+                                        <li><a href="#" title="시청안내">시청안내</a>
+                                            <ul>
+                                                <li><a href="#" title="조직도 및 업무안내">조직도 및 업무안내</a></li>
+                                                <li><a href="#" title="부서별 팩스번호 안내">부서별 팩스번호 안내</a></li>
+                                                <li><a href="#" title="청사안내">청사안내</a></li>
+                                                <li><a href="#" title="공적자원안내">공적자원안내</a></li>
+                                                <li><a href="#" title="찾아오시는 길">찾아오시는 길</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="용인시 소개">용인시 소개</a>
+                                            <ul>
+                                                <li><a href="#" title="역사">역사</a></li>
+                                                <li><a href="#" title="연혁">연혁</a></li>
+                                                <li><a href="#" title="지명유래">지명유래</a></li>
+                                                <li><a href="#" title="용인의 상징">용인의 상징</a></li>
+                                                <li><a href="#" title="시민현장">시민현장</a></li>
+                                                <li><a href="#" title="용인애향가">용인애향가</a></li>
+                                                <li><a href="#" title="행정안내도">행정안내도</a></li>
+                                                <li><a href="#" title="용인시 CI">용인시 CI</a></li>
+                                                <li><a href="#" title="용인시민카드">용인시민카드</a></li>
+                                                <li><a href="#" title="용인시 관광 홍보대사 판다">용인시 관광 홍보대사 판다</a></li>
+                                                <li><a href="#" title="생활안내서">생활안내서</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="용인시현황">용인시현황</a>
+                                            <ul>
+                                                <li><a href="#" title="기본현황">기본현황</a></li>
+                                                <li><a href="#" title="재정규모">재정규모</a></li>
+                                                <li><a href="#" title="지역특성">지역특성</a></li>
+                                                <li><a href="#" title="문화재현황">문화재현황</a></li>
+                                                <li><a href="#" title="수상내역">수상내역</a></li>
+                                                <li><a href="#" title="자매도시(국내)">자매도시(국내)</a></li>
+                                                <li><a href="#" title="자매도시(해외)">자매도시(해외)</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="용인특례시">용인특례시</a>
+                                            <ul>
+                                                <li><a href="#" title="특례시란?">특례시란?</a></li>
+                                                <li><a href="#" title="특례시 추진경과">특례시 추진경과</a></li>
+                                                <li><a href="#" title="보도자료">보도자료</a></li>
+                                                <li><a href="#" title="영상자료">영상자료</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="iconmenu"><a href="#" title="분야별정보">분야별정보</a>
+                            <div class="gub_menu">
+                                <div class="gub_menu_inner">
+                                    <div class="gub_menu_tit">
+                                        <h4>분야별정보</h4>
+                                    </div>
+                                    <ul style="background-image: none; padding: 50px 39px 0;">
+                                        <li><a href="#" title="복지">복지</a>
+                                            <ul>
+                                                <li><a href="#" title="복지">복지</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="일자리">일자리</a>
+                                            <ul>
+                                                <li><a href="#" title="일자리">일자리</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="교육">교육</a>
+                                            <ul>
+                                                <li><a href="#" title="교육">교육</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="세금">세금</a>
+                                            <ul>
+                                                <li><a href="#" title="세금">세금</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="경제">경제</a>
+                                            <ul>
+                                                <li><a href="#" title="경제">경제</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="도시">도시</a>
+                                            <ul>
+                                                <li><a href="#" title="도시">도시</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="교통">교통</a>
+                                            <ul>
+                                                <li><a href="#" title="교통">교통</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="민방위">민방위</a>
+                                            <ul>
+                                                <li><a href="#" title="민방위">민방위</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="안전">안전</a>
+                                            <ul>
+                                                <li><a href="#" title="안전">안전</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="환경/녹지">환경/녹지</a>
+                                            <ul>
+                                                <li><a href="#" title="환경/녹지">환경/녹지</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="위생/보건">위생/보건</a>
+                                            <ul>
+                                                <li><a href="#" title="위생/보건">위생/보건</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="통계">통계</a>
+                                            <ul>
+                                                <li><a href="#" title="통계">통계</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="반려동물">반려동물</a>
+                                            <ul>
+                                                <li><a href="#" title="반려동물">반려동물</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" title="공공체육시설안내">공공체육시설 안내</a>
+                                            <ul>
+                                                <li><a href="#" title="공공체육시설안내">공공체육시설안내</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header_icon">
+                    <div class="search_top">
+                        <button type="button" title="통합검색" class="ir_pm">통합검색</button>
+                    </div>
+                    <div class="search_menu">
+                        <button type="button" title="통합메뉴" class="ir_pm">통합메뉴</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="form">
+        <div class="container">
+            <div id="menu">
+                <h1>로그인</h1>
+                <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">아이디찾기</a></li>
+                    <li><a href="#">비밀번호찾기</a></li>
+                </ul>
+            </div>
+            <div id="contents">
+                <div class="h2_box">
+                    <h2>로그인</h2>
+                    <ul>
+                        <li>HOME</a></li>
+                        <li>통합회원</a></li>
+                        <li>로그인</a></li>
+                    </ul>
+                </div>
+                <div class="loginform">
+                    <h3>회원 로그인</h3>
+                    <div class="login_box">
+                        <div class="login_inner">
+                            <label for="id">아이디</label>
+                            <input type="text" name="id" id="id" class="userid"  required autofocus>
+                            <label for="pw">비밀번호</label>
+                            <input type="text" name="pw" id="pw" class="userPW"  required autofocus>
+                            <button class="btn_login">로그인</button>
+                        </div>
+                        <div class="login_text">
+                            <p>※ 아이디는 공백없이 정확히 입력하시기 바랍니다.</p>
+                            <a href="#">회원가입</a>
+                            <a href="#">아이디 찾기</a>
+                            <a href="#">비밀번호 찾기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="indet_box">
+                    <h3>비회원 로그인</h3>
+                    <div class="phon"> 
+                        <div class="phon1">
+                            <span class="phon3">휴대폰인증</span>
+                            <span>본인 명의의 휴대폰으로 인증</span>
+                        </div>
+                        <a href="#">휴대폰 본인인증</a>
+                        <span class="b_span">문의 : 1577-1006</span>
+                    </div>
+                </div>
+                <div class="box1">
+                    <dl>
+                        <dt>본인인증서비스 이용고객에 대한 보안강화로 인하여 취약한 OS 및 브라우저의 경우
+                            <br>
+                            서비스 이용에 제한이 발생할 수 있으니 업데이트를 진행하여 주시기 바랍니다.
+                        </dt>
+                        <dd>
+                            <span class="bold">대상 : 브라우저(IE7 이하) 및 취약한 프로토콜(SSL 3.0 이하) <span class="point">※ 2019.12.11.부터 시행</span></span>
+                            <br>
+                            <span>※ Windows XP, Vista 이하버전, Internet Explorer 7.0 이하</span>
+                        </dd>
+                        <dd class="point"><span>문의전화 : SCI평가정보(주) 1577-1006</span></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="familysite">
+            <div class="container">
+                <ul class="familysite_list">
+                    <li><a href="#">부서/직속기관/사업소</a></li>
+                    <li><a href="#">구청/주민센터/주민자치센터</a></li>
+                    <li><a href="#">산하/기타기관</a></li>
+                    <li><a href="#">복지단체</a></li>
+                    <li><a href="#">유관기관</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_body">
+            <div class="container">
+                <ul class="call_center">
+                    <li class="callcenter">
+                        <span class="tit">민원안내콜센터</span>
+                        <span class="num blue">1577-1122 / 031-324-2114</span>
+                    </li>
+                    <li class="messagecenter">
+                        <span class="tit">휴대전화 문자상담(09:00 ~ 18:00)</span>
+                        <span class="num green">1577-1122</span>
+                    </li>
+                </ul>
+                <ul class="footer_menu">
+                    <li><a href="#" class="blue"><span>개인정보처리방침</span></a></li>
+                    <li><a href="#"><span>저작권정책</span></a></li>
+                    <li><a href="#"><span>누리집 안내(사이트맵)</span></a></li>
+                    <li><a href="#"><span>이메일무단수집거부</span></a></li>
+                    <li><a href="#"><span>부서별 FAX</spa></a></li>
+                </ul>
+                <div class="address">
+                    <span class="bold">(17019) 경기도 용인시 처인구 중부대로 1199(삼가동)</span>
+                    <span>COPYRIGHT(C) YONGIN CITY. ALL RIGHTS RESERVED.</span>
+                </div>
+                <div class="mark">
+                    <img src="./img/qr_mark.png" alt="qr_mark">
+                    <a href="#"><img src="./img/wa_mark.png" alt="wa_mark"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
