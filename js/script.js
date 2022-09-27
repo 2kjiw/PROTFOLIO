@@ -3,7 +3,7 @@ $(function(){
     //header nav
     let headerNav=$('#header');
     let section1He=$('#section1');
-    let section1HeOffset=section1He.innerHeight();
+    let section1HeOffset=section1He.height();
     let menu=$('.nav>.flex>ul>li');
     // console.log(section1HeOffset);
 
