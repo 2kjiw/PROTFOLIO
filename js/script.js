@@ -136,7 +136,29 @@ $(function(){
         move(next, '-100%', 0);
     });
 
+
+    //design-wrap
+    let design=$('.design-wrap>li');
+    let bigde=$('.bigdeproject');
+    let bigdeimg=$('.bigdeproject>.bigdeproject-wrap');
+    let closeBtn=$('.btn');
+
+    design.click(function(e){
+        let tg=$(this);
+        let i=tg.index()
+
+        e.preventDefault();
+        bigde.fadeIn();
+        bigdeimg.removeClass('on');
+        bigdeimg.eq(i).addClass('on');
+    });
+    closeBtn.click(function(e){
+        e.preventDefault();
+        bigde.fadeOut();
+    });
+
     
+    //topbtn
     $('#topBtn').click(function(e){
         e.preventDefault();
         $('html, body').animate({

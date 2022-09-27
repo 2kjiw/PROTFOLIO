@@ -304,11 +304,11 @@ body{
             }
             .skill-wrap{
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-gap: 15px;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
                 >div{
                     position: relative;
-                    width: 48%;
                     border: 1px solid $grey;
                     border-radius: 30px;
                     padding: 50px;
@@ -427,6 +427,7 @@ body{
     }
     #section3{
         padding: 100px 0;
+        position: relative;
         .container{
             h3{}
             #project-web{
@@ -511,8 +512,6 @@ body{
                     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
                     grid-template-rows: repeat(auto-fit, minmax(195px, 250px));
                     li{
-                        /* width: 180px;
-                        height: 195px; */
                         background: #ddd;
                         position: relative;
                         overflow: hidden;
@@ -551,17 +550,20 @@ body{
                             }
                             .deicon{
                                 text-align: center;
-                                p{
-                                    display: inline;
-                                    font-weight: 600;
-                                    &.ps{
-                                        color: #00a9ff;
-                                    }
-                                    &.ai{
-                                        color: #ff9a00;
-                                    }
-                                    &.id{
-                                        color: #ff3366;
+                                a{
+                                    display: block;
+                                    p{
+                                        display: inline;
+                                        font-weight: 600;
+                                        &.ps{
+                                            color: #00a9ff;
+                                        }
+                                        &.ai{
+                                            color: #ff9a00;
+                                        }
+                                        &.id{
+                                            color: #ff3366;
+                                        }
                                     }
                                 }
                             }
@@ -573,6 +575,26 @@ body{
                         }
                     }
                 }
+                .bigdeproject{
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                    background: rgba($color: #000000, $alpha: .7);
+                    display: none;
+                    .bigdeproject-wrap{
+                        display: none;
+                        position: absolute;
+                        top: 50%; left: 50%; transform: translate(-50%, -50%);
+                        &.on{
+                            display: block;
+                        }
+                    }
+                    .btn{
+                        width: 100px; height: 30px; cursor: pointer;
+                        border: none; background: $main; color: #fff;
+                        position: absolute; top: 30%; right: 30%;
+                    }
+                }
             }
         }
     }
@@ -580,6 +602,7 @@ body{
         height: 100vh;
         overflow: hidden;
         margin-top: 100px;
+        background: url(../img/footer.svg) no-repeat -50px 225px;
         .container{
             h3{
                 margin-top: 80px;
@@ -589,14 +612,6 @@ body{
                     font-size: 85px;
                     text-align: center;
                     margin-top: 20px;
-                }
-            }
-            .footer-bg{
-                position: relative;
-                bottom: -150px;
-                left: -30%;
-                opacity: .15;
-                svg{
                 }
             }
         }

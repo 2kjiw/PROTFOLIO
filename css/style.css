@@ -288,12 +288,12 @@ body #section2 .container h4 {
 }
 body #section2 .container .skill-wrap {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 body #section2 .container .skill-wrap > div {
   position: relative;
-  width: 48%;
   border: 1px solid #989898;
   border-radius: 30px;
   padding: 50px;
@@ -388,6 +388,7 @@ body #section2 .container .skill-wrap > div ul li .num .num-progress {
 }
 body #section3 {
   padding: 100px 0;
+  position: relative;
 }
 body #section3 .container #project-web {
   margin-top: 70px;
@@ -472,8 +473,6 @@ body #section3 .container #project-design .design-wrap {
   grid-template-rows: repeat(auto-fit, minmax(195px, 250px));
 }
 body #section3 .container #project-design .design-wrap li {
-  /* width: 180px;
-  height: 195px; */
   background: #ddd;
   position: relative;
   overflow: hidden;
@@ -516,26 +515,60 @@ body #section3 .container #project-design .design-wrap li .design-ex > p.deprg {
 body #section3 .container #project-design .design-wrap li .design-ex .deicon {
   text-align: center;
 }
-body #section3 .container #project-design .design-wrap li .design-ex .deicon p {
+body #section3 .container #project-design .design-wrap li .design-ex .deicon a {
+  display: block;
+}
+body #section3 .container #project-design .design-wrap li .design-ex .deicon a p {
   display: inline;
   font-weight: 600;
 }
-body #section3 .container #project-design .design-wrap li .design-ex .deicon p.ps {
+body #section3 .container #project-design .design-wrap li .design-ex .deicon a p.ps {
   color: #00a9ff;
 }
-body #section3 .container #project-design .design-wrap li .design-ex .deicon p.ai {
+body #section3 .container #project-design .design-wrap li .design-ex .deicon a p.ai {
   color: #ff9a00;
 }
-body #section3 .container #project-design .design-wrap li .design-ex .deicon p.id {
+body #section3 .container #project-design .design-wrap li .design-ex .deicon a p.id {
   color: #ff3366;
 }
 body #section3 .container #project-design .design-wrap li:hover .design-ex {
   top: 0;
 }
+body #section3 .container #project-design .bigdeproject {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+body #section3 .container #project-design .bigdeproject .bigdeproject-wrap {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #section3 .container #project-design .bigdeproject .bigdeproject-wrap.on {
+  display: block;
+}
+body #section3 .container #project-design .bigdeproject .btn {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  background: #4384F7;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  right: 30%;
+}
 body #footer {
   height: 100vh;
   overflow: hidden;
   margin-top: 100px;
+  background: url(../img/footer.svg) no-repeat -50px 225px;
 }
 body #footer .container h3 {
   margin-top: 80px;
@@ -544,12 +577,6 @@ body #footer .container .contact-wrap h6 {
   font-size: 85px;
   text-align: center;
   margin-top: 20px;
-}
-body #footer .container .footer-bg {
-  position: relative;
-  bottom: -150px;
-  left: -30%;
-  opacity: 0.15;
 }
 body #topBtn {
   width: 30px;
