@@ -573,8 +573,8 @@ body #section3 .container #project-design .bigdeproject .btn {
   background: #4384F7;
   color: #fff;
   position: fixed;
-  top: 25%;
-  left: 20%;
+  bottom: 20%;
+  right: 20%;
   font-weight: 600;
   font-size: 16px;
 }
