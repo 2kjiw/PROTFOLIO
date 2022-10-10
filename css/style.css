@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "establishRoomNo703OTF";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff") format("woff");
@@ -32,6 +33,11 @@ body {
   width: 100%;
   color: #343434;
   background: #fff;
+  /* 메뉴바 끝 */
+  /* 1페이지 끝 */
+  /* 2페이지 끝(about me) */
+  /* 3페이지 끝(project) */
+  /* 4페이지 끝(contact) */
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -389,81 +395,87 @@ body #section2 .container .skill-wrap > div ul li .num .num-progress {
 body #section3 {
   padding: 100px 0;
   position: relative;
+  /* 웹 프로젝트 끝 */
 }
-body #section3 .container #project-web {
+body #section3 #project-web {
   margin-top: 70px;
+  margin-bottom: 100px;
 }
-body #section3 .container #project-web h4 {
+body #section3 #project-web h4 {
   margin-bottom: 50px;
 }
-body #section3 .container #project-web .web-wrap {
-  width: 670px;
-  height: 500px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-body #section3 .container #project-web .web-wrap li {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-}
-body #section3 .container #project-web .web-wrap li:first-child {
-  left: 0;
-}
-body #section3 .container #project-web .web-wrap li.web-com {
-  background-image: url(../img/computer.png);
-}
-body #section3 .container #project-web .web-wrap li.web-com a {
-  background: #fff;
-  width: 400px;
-  height: 224px;
-  display: block;
-  position: relative;
-  top: 43%;
-  left: 49.5%;
-  transform: translate(-50%, -50%);
-  overflow-y: auto;
-}
-body #section3 .container #project-web .web-wrap li.web-com a img {
-  width: 100%;
-  height: auto;
-}
-body #section3 .container #project-web .web-wrap li.web-mobile {
-  background-image: url(../img/iPhone\ 13\ Pro\ Max\ &\ S22\ Ultra\ Animated\ -\ Free\ Sample.png);
-  background-size: 30%;
-}
-body #section3 .container #project-web .web-wrap li.web-mobile a {
-  background: #fff;
-  width: 187px;
-  height: 400px;
-  display: block;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow-y: auto;
-}
-body #section3 .container #project-web .web-wrap li.web-mobile a img {
-  width: 100%;
-  height: auto;
-}
-body #section3 .container #project-web .slidebtn {
-  width: 100%;
+body #section3 #project-web .slidebtn {
+  width: 97%;
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: -250px;
+  top: 300px;
   transform: translateY(-50%);
+  margin: 0 auto;
 }
-body #section3 .container #project-web .slidebtn li {
+body #section3 #project-web .slidebtn li {
   font-size: 40px;
+}
+body #section3 #project-web .web-area {
+  width: 90%;
+  margin: 0 auto;
+}
+body #section3 #project-web .web-area .web-wrap {
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  transform: translate(0px);
+  background-color: rgb(77, 46, 46);
+}
+body #section3 #project-web .web-area .web-wrap li {
+  width: 70%;
+  height: 90%;
+  background-color: rgb(153, 96, 96);
+  border-radius: 20px;
+  margin-left: 30px;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px #4384F7;
+  /* &.web-com{
+      a{
+          background: #fff;
+          width: 400px;
+          height: 224px;
+          display: block;
+          position: relative;
+          top: 43%;
+          left: 49.5%;
+          transform: translate(-50%, -50%);
+          overflow-y: auto;
+          img{
+              width: 100%;
+              height: auto;
+          }
+      }
+  }
+  &.web-mobile{
+      background-size: 30%;
+      a{
+          background: #fff;
+          width: 187px;
+          height: 400px;
+          display: block;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow-y: auto;
+          img{
+              width: 100%;
+              height: auto;
+          }
+      }
+  } */
+}
+body #section3 #project-web .web-area .web-wrap li.on {
+  width: 80%;
+  height: 98%;
 }
 body #section3 .container #project-design .design-wrap {
   margin-top: 50px;
@@ -535,12 +547,12 @@ body #section3 .container #project-design .design-wrap li:hover .design-ex {
   top: 0;
 }
 body #section3 .container #project-design .bigdeproject {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(66, 57, 72, 0.5);
   display: none;
 }
 body #section3 .container #project-design .bigdeproject .bigdeproject-wrap {
@@ -560,9 +572,11 @@ body #section3 .container #project-design .bigdeproject .btn {
   border: none;
   background: #4384F7;
   color: #fff;
-  position: absolute;
-  top: 30%;
-  right: 30%;
+  position: fixed;
+  top: 25%;
+  left: 20%;
+  font-weight: 600;
+  font-size: 16px;
 }
 body #footer {
   height: 100vh;
@@ -595,4 +609,10 @@ body #topBtn i {
   font-size: 18px;
   color: #fff;
   line-height: 30px;
+}
+
+@media (max-width: 1265px) {
+  .design-skill {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

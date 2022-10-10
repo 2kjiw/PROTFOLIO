@@ -253,6 +253,7 @@ body{
             }
         }
     }
+    /* 메뉴바 끝 */
     #section1{
         width: 100%;
         height: 100%;
@@ -268,6 +269,7 @@ body{
 
         }
     }
+    /* 1페이지 끝 */
     #section2{
         width: 100%;
         padding: 0 0 50px 0;
@@ -425,35 +427,50 @@ body{
             }
         }
     }
+    /* 2페이지 끝(about me) */
     #section3{
         padding: 100px 0;
         position: relative;
-        .container{
-            h3{}
-            #project-web{
-                margin-top: 70px;
-                h4{margin-bottom: 50px;}
+        #project-web{
+            margin-top: 70px;
+            margin-bottom: 100px;
+            h4{margin-bottom: 50px;}
+            .slidebtn{
+                width: 97%;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                top: 300px;
+                transform: translateY(-50%);
+                margin: 0 auto;
+                li{
+                    font-size: 40px;
+                }
+            }
+            .web-area{
+                width: 90%;
+                margin: 0 auto;
                 .web-wrap{
-                    width: 670px;
+                    width: 100%;
                     height: 500px;
-                    margin: 0 auto;
+                    align-items: center;
                     overflow: hidden;
-                    position: relative;
+                    display: flex;
+                    transform: translate(0px);
+                    background-color: rgb(77, 46, 46);
                     li{
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 100%;
-                        background-color: #fff;
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        background-size: 100%;
-                        &:first-child{
-                            left: 0;
+                        width: 70%;
+                        height: 90%;
+                        background-color: rgb(153, 96, 96);
+                        border-radius: 20px;
+                        margin-left: 30px;
+                        flex-shrink: 0;
+                        box-shadow: 0 0 5px $main;
+                        &.on{
+                            width: 80%;
+                            height: 98%;
                         }
-                        &.web-com{
-                            background-image: url(../img/computer.png);
+                        /* &.web-com{
                             a{
                                 background: #fff;
                                 width: 400px;
@@ -471,7 +488,6 @@ body{
                             }
                         }
                         &.web-mobile{
-                            background-image: url(../img/iPhone\ 13\ Pro\ Max\ &\ S22\ Ultra\ Animated\ -\ Free\ Sample.png);
                             background-size: 30%;
                             a{
                                 background: #fff;
@@ -488,21 +504,14 @@ body{
                                     height: auto;
                                 }
                             }
-                        }
-                    }
-                }
-                .slidebtn{
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    position: relative;
-                    top: -250px;
-                    transform: translateY(-50%);
-                    li{
-                        font-size: 40px;
+                        } */
                     }
                 }
             }
+        }
+        /* 웹 프로젝트 끝 */
+        .container{
+            h3{}
             #project-design{
                 h4{}
                 .design-wrap{
@@ -576,10 +585,10 @@ body{
                     }
                 }
                 .bigdeproject{
-                    position: absolute;
+                    position: fixed;
                     top: 0; left: 0;
                     width: 100%; height: 100%;
-                    background: rgba($color: #000000, $alpha: .7);
+                    background: rgba(66, 57, 72, .5);
                     display: none;
                     .bigdeproject-wrap{
                         display: none;
@@ -592,12 +601,14 @@ body{
                     .btn{
                         width: 100px; height: 30px; cursor: pointer;
                         border: none; background: $main; color: #fff;
-                        position: absolute; top: 30%; right: 30%;
+                        position: fixed; top: 25%; left: 20%;
+                        font-weight: 600; font-size: 16px;
                     }
                 }
             }
         }
     }
+    /* 3페이지 끝(project) */
     #footer{
         height: 100vh;
         overflow: hidden;
@@ -616,6 +627,7 @@ body{
             }
         }
     }
+    /* 4페이지 끝(contact) */
     #topBtn{
         width: 30px;
         height: 30px;
@@ -636,6 +648,6 @@ body{
     }
 }
 
-@media (max-width:1230px) {
-    
+@media (max-width:1265px) {
+    .design-skill{margin-top: 20px;}
 }

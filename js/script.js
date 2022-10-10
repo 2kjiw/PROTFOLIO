@@ -85,23 +85,25 @@ $(function(){
 
 
     //project
-    let project=$('.web-wrap>li');
+    let project=$('.web-wrap');
+    let projectList=$('.web-wrap>li');
+    let proWidth=projectList.width();
     let current=0;
     let timer=null;
     let prev=$('.slidebtn>.prev');
     let next=$('.slidebtn>.next');
 
-    slide();
-    function slide(){
-        timer=setInterval(function(){
-            let prev=project.eq(current);
-            move(prev, 0, '-100%');
-            current++;
-            if(current==project.size())current=0;
-            let next=project.eq(current);
-            move(next, '100%', 0);
-        },3000)
-    }
+    // slide();
+    // function slide(){
+    //     timer=setInterval(function(){
+    //         project.stop().animate({transform: `translate(${-proWidth}+'px')`},500, function(){
+    //             /* var i=$('.web-wrap>li.on').index();
+    //             console.log(i) */
+    //             projectList.removeClass('on').eq((current++)).addClass('on');
+    //             if(current===projectList.size()) current=0;
+    //         })
+    //     },3000)
+    // }
 
     function move(tg, strat, end){
         tg.css('left',strat).stop().animate({left:end})

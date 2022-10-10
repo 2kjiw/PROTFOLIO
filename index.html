@@ -13,9 +13,11 @@
 	<meta name='Description' content='안녕하세요. 웹 퍼블리셔 신입 강지우입니다.'>
 	<meta name='Author-Date' content='2022.09.07'>
 	<meta name='Robots' content='index,follow'>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
     <link rel="icon" href="./logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="./logo.ico">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -65,6 +67,7 @@
             </nav>
         </div>
     </header>
+    <!-- 헤더 끝(메뉴바) -->
     <section id="section1" class="page2 page">
         <div class="container">
             <h1>
@@ -98,6 +101,7 @@
             </h1>
         </div>
     </section>
+    <!-- 1페이지 끝 -->
     <section id="section2" class="page3 page">
         <h3>About me</h3>
         <div class="aboutme">
@@ -220,30 +224,34 @@
             </div>
         </div>
     </section>
+    <!-- 2페이지 끝(about me) -->
     <section id="section3" class="page4 page">
-        <div class="container">
-            <h3>Project</h3>
-            <div id="project-web">
-                <h4>web</h4>
+        <h3>Project</h3>
+        <div id="project-web">
+            <h4>web</h4>
+            <ul class="slidebtn">
+                <li class="prev"><a href="javascript:"><i class="fas fa-chevron-left"></i></a></li>
+                <li class="next"><a href="javascript:"><i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+            <div class="web-area">
                 <ul class="web-wrap">
-                    <li class="web-com">
-                        <a href="http://jiwoo0204.dothome.co.kr/01_project1/indexre.html" title="용인시청대표포털클론코딩" target="_blank"><img src="./img/yongin.png" alt="용인시청대표포털"></a>
+                    <li class="web-com on">
+                        <a href="http://jiwoo0204.dothome.co.kr/01_project1/indexre.html" title="용인시청대표포털클론코딩" target="_blank"></a>
                     </li>
                     <li class="web-com">
-                        <a href="./05_반응형/index.html" title="신라호텔" target="_blank"><img src="./img/theshillaPC.png" alt="신라호텔"></a>
+                        <a href="./05_반응형/index.html" title="신라호텔" target="_blank"></a>
                     </li>
                     <li class="web-mobile">
-                        <a href="./07_STUDIO DALGONA/index.html" title="스튜디오달고나모바일" target="_blank"><img src="./img/studiodalgona.png" alt="스튜디오달고나모바일"></a>
+                        <a href="./07_STUDIO DALGONA/index.html" title="스튜디오달고나모바일" target="_blank"></a>
                     </li>
                     <li class="web-com">
-                        <a href="./index.html" title="포트폴리오" target="_blank"><img src="./img/protfolio.png" alt="포트폴리오"></a>
+                        <a href="./index.html" title="포트폴리오" target="_blank"></a>
                     </li>
                 </ul>
-                <ul class="slidebtn">
-                    <li class="prev"><a href="javascript:"><i class="fas fa-chevron-left"></i></a></li>
-                    <li class="next"><a href="javascript:"><i class="fas fa-chevron-right"></i></a></li>
-                </ul>
             </div>
+        </div>
+        <div class="container">
+            <!-- 웹 프로젝트 끝 -->
             <div id="project-design">
                 <h4>design</h4>
                 <ul class="design-wrap">
@@ -313,8 +321,10 @@
                     <button class="btn">닫기</button>
                 </div>
             </div>
+            <!-- 디자인 프로젝트 끝 -->
         </div>
     </section>
+    <!-- 3페이지 끝(project) -->
     <footer id="footer" class="page5 page">
         <div class="container">
             <h3>Contact</h3>
@@ -324,6 +334,7 @@
             </div>
         </div>
     </footer>
+    <!-- 4페이지 끝(contact) -->
     <div id="topBtn">
         <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
