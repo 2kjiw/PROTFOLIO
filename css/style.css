@@ -200,7 +200,7 @@ body #section1 .container h1 > svg {
 }
 body #section2 {
   width: 100%;
-  padding: 0 0 50px 0;
+  padding: 75px 0;
   margin-top: 50px;
 }
 body #section2 h3 {
@@ -215,15 +215,29 @@ body #section2 .aboutme .container .aboutme-wrap {
   display: flex;
   justify-content: space-evenly;
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 180%;
 }
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
+  body #section2 .aboutme .container .aboutme-wrap .rudfur {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 750px) {
   body #section2 .aboutme .container .aboutme-wrap {
-    font-size: 10px;
+    font-size: 12px;
   }
   body #section2 .aboutme .container .aboutme-wrap .rudfur {
     margin: 0 15px;
+  }
+}
+@media (max-width: 640px) {
+  body #section2 .aboutme .container .aboutme-wrap {
+    flex-direction: column;
+    font-size: 12px;
+  }
+  body #section2 .aboutme .container .aboutme-wrap .rudfur {
+    margin: 20px 0;
   }
 }
 body #section2 .aboutme .container .aboutme-wrap .profile a > span {
@@ -345,30 +359,15 @@ body #section3 {
 }
 body #section3 #project-web {
   margin-top: 70px;
-  margin-bottom: 100px;
-}
-body #section3 #project-web h4 {
-  margin-bottom: 50px;
-}
-body #section3 #project-web .slidebtn {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  top: 300px;
-  transform: translateY(-50%);
-}
-body #section3 #project-web .slidebtn li {
-  font-size: 40px;
+  margin-bottom: 250px;
 }
 body #section3 #project-web .web-area {
-  width: 80%;
   margin: 0 auto;
+  position: relative;
 }
 body #section3 #project-web .web-area .web-wrap {
   width: 100%;
-  height: 500px;
+  height: 650px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -388,7 +387,6 @@ body #section3 #project-web .web-area .web-wrap li {
   align-items: center;
 }
 body #section3 #project-web .web-area .web-wrap li.on {
-  width: 80%;
   height: 98%;
 }
 body #section3 #project-web .web-area .web-wrap li .web-img {
@@ -404,7 +402,7 @@ body #section3 #project-web .web-area .web-wrap li .web-text {
   height: 70%;
 }
 body #section3 #project-web .web-area .web-wrap li .web-text .title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
 }
 body #section3 #project-web .web-area .web-wrap li .web-text .point {
@@ -412,7 +410,7 @@ body #section3 #project-web .web-area .web-wrap li .web-text .point {
 }
 body #section3 #project-web .web-area .web-wrap li .web-text .point span {
   margin-right: 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 body #section3 #project-web .web-area .web-wrap li .web-text .point span:before {
   content: "#";
@@ -422,6 +420,7 @@ body #section3 #project-web .web-area .web-wrap li .web-text .point span:before 
 }
 body #section3 #project-web .web-area .web-wrap li .web-text table {
   border-spacing: 0 7px;
+  font-size: 18px;
 }
 body #section3 #project-web .web-area .web-wrap li .web-text table caption {
   display: none;
@@ -452,6 +451,25 @@ body #section3 #project-web .web-area .web-wrap li .web-text a i {
 body #section3 #project-web .web-area .web-wrap li .web-text a:hover {
   background: #4384F7;
   color: #fefefe;
+}
+body #section3 #project-web .web-area .slidebtn {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body #section3 #project-web .web-area .slidebtn li {
+  font-size: 40px;
+  position: absolute;
+}
+body #section3 #project-web .web-area .slidebtn li.prev {
+  left: 50px;
+}
+body #section3 #project-web .web-area .slidebtn li.next {
+  left: calc(100vw - 100px);
+}
+body #section3 #project-web .web-area .slidebtn li a {
+  color: #4384F7;
 }
 body #section3 .container #project-design .design-wrap {
   margin-top: 50px;
@@ -559,7 +577,7 @@ body #footer {
   height: 100vh;
   overflow: hidden;
   margin-top: 100px;
-  background: url(../img/footer.svg) no-repeat -50px 225px;
+  background: url(../img/footer.svg) no-repeat -50px bottom;
 }
 body #footer .container h3 {
   margin-top: 80px;

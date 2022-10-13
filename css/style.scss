@@ -161,7 +161,7 @@ body{
     }
     /* 1페이지 끝 */
     #section2{
-        width: 100%; padding: 0 0 50px 0; margin-top: 50px;
+        width: 100%; padding: 75px 0; margin-top: 50px;
         h3{
             margin-bottom: 100px;
         }
@@ -171,10 +171,17 @@ body{
             .container{
                 .aboutme-wrap{
                     display: flex; justify-content: space-evenly;
-                    white-space: nowrap; font-size: 14px; line-height: 180%;
-                    @media (max-width:720px) {
-                        font-size: 10px;
+                    white-space: nowrap; font-size: 18px; line-height: 180%;
+                    @media (max-width:1000px) {
+                        .rudfur{margin: 0 20px;}
+                    }
+                    @media (max-width:750px) {
+                        font-size: 12px;
                         .rudfur{margin: 0 15px;}
+                    }
+                    @media (max-width:640px) {
+                        flex-direction: column; font-size: 12px;
+                        .rudfur{margin: 20px 0;}
                     }
                     .profile{
                         a{
@@ -294,20 +301,13 @@ body{
     #section3{
         padding: 100px 0; position: relative;
         #project-web{
-            margin-top: 70px; margin-bottom: 100px;
-            h4{margin-bottom: 50px;}
-            .slidebtn{
-                width: 90%; margin: 0 auto;
-                display: flex; justify-content: space-between;
-                position: relative; top: 300px; transform: translateY(-50%);
-                li{
-                    font-size: 40px;
-                }
-            }
+            margin-top: 70px; margin-bottom: 250px;
+            h4{}
             .web-area{
-                width: 80%; margin: 0 auto;
+                margin: 0 auto; position: relative;
+                
                 .web-wrap{
-                    width: 100%; height: 500px; overflow: hidden;
+                    width: 100%; height: 650px; overflow: hidden;
                     display: flex; align-items: center;
                     transform: translate(0px); background-color: rgb(77, 46, 46);
                     li{
@@ -316,7 +316,7 @@ body{
                         flex-shrink: 0; box-shadow: 0 0 5px $main;
                         display: flex; align-items: center;
                         &.on{
-                            width: 80%; height: 98%;
+                            height: 98%;
                         }
                         .web-img{
                             width: 60%; height: 90%; overflow: hidden;
@@ -327,12 +327,12 @@ body{
                         .web-text{
                             margin-left: 30px; height: 70%;
                             .title{
-                                font-size: 20px; font-weight: 600;
+                                font-size: 24px; font-weight: 600;
                             }
                             .point{
                                 margin-bottom: 30px;
                                 span{
-                                    margin-right: 10px; font-size: 14px;
+                                    margin-right: 10px; font-size: 16px;
                                     &:before{
                                         content: "#"; color: $main; margin-right: 5px;
                                         font-size: 15px;
@@ -340,7 +340,7 @@ body{
                                 }
                             }
                             table{
-                                border-spacing: 0 7px;
+                                border-spacing: 0 7px; font-size: 18px;
                                 caption{display: none;}
                                 colgroup{
                                     .w3{width: 40%;}
@@ -366,6 +366,16 @@ body{
                                 }
                             }
                         }
+                    }
+                }
+                .slidebtn{
+                    margin: 0 auto;
+                    position: absolute; top: 50%; transform: translateY(-50%);
+                    li{
+                        font-size: 40px; position: absolute;
+                        &.prev{left: 50px;}
+                        &.next{left: calc(100vw - 100px);}
+                        a{color: $main;}
                     }
                 }
             }
@@ -454,7 +464,7 @@ body{
     /* 3페이지 끝(project) */
     #footer{
         height: 100vh; overflow: hidden; margin-top: 100px;
-        background: url(../img/footer.svg) no-repeat -50px 225px;
+        background: url(../img/footer.svg) no-repeat -50px bottom;
         .container{
             h3{
                 margin-top: 80px;
