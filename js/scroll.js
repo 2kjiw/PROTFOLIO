@@ -55,6 +55,13 @@ $(function(){
         lastScrollTop = st;
     }
 
+    //header api
+    $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=84848ad5cf867cf26673fbbcbfb6b87f&units=metric',function(data){
+        let icon=data.weather[0].icon;
+    
+        $('.weather-icon').append('<img src="http://openweathermap.org/img/wn/'+icon+'@2x.png" />');
+    });
+
     //header nav 스크롤이동
     menu.find('a').click(function(e){
         // console.log(num);
@@ -82,10 +89,4 @@ $(function(){
         menu.removeClass('on');
     });
 
-    //header api
-    $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=84848ad5cf867cf26673fbbcbfb6b87f&units=metric',function(data){
-        let icon=data.weather[0].icon;
-    
-        $('.weather-icon').append('<img src="http://openweathermap.org/img/wn/'+icon+'@2x.png" />');
-    });
 });
