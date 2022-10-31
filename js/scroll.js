@@ -1,58 +1,43 @@
 $(function(){
     //scroll event
-    let didScroll;
-    let lastScrollTop = 0;
-    let delta = 5;
-
+    let scrTop=$(window).scrollTop();
     let headerNav=$('#header');
     let section1He=$('#section1');
-    let section2He=$('#section2').scrollTop();
-    let section3He=$('#section3').scrollTop();
-    let footerHe=$('#footer');
-    let section1Height = section1He.outerHeight();
+    let scrollPage=$('.page');
+    let section1Height = section1He.height();
     let menu=$('.nav>.flex>ul>li');
     // console.log(section1Height);
     
     $(window).scroll(function(){
-        didScroll = true;
+        navTop();
+        menuOn();
     });
 
-    setInterval(function() {
-        if(didScroll) {
-            hasScroll();
-            didScroll = false;
-        }
-    }, 250);
-
-    function hasScroll() {
-        let st = $(this).scrollTop();
-        // console.log(st);
-        
-        if(Math.abs(lastScrollTop - st) <= delta) return;
-        
-        if($(this).scrollTop()>=section1Height/2){
+    function navTop(){
+        if($(this).scrollTop() >= section1Height/2){
             headerNav.addClass('on');
             $('#topBtn').fadeIn();
-            
-            if($(this).scrollTop()>=section2He){
-                menu.removeClass('on');
-                menu.eq(menu.index()).addClass('on');
-
-            }else if($(this).scrollTop()>=section3He){
-                menu.removeClass('on');
-                menu.eq(menu.index()).addClass('on');
-                
-            }else{
-                menu.removeClass('on');
-            }
-            
         }else{
             headerNav.removeClass('on');
             $('#topBtn').fadeOut();
             menu.removeClass('on');
         }
+    }
 
-        lastScrollTop = st;
+    function menuOn(){
+        menu.each(function(idx){
+            let i=scrollPage.index();
+            let menuId=$(this).find('a').attr('href');
+            let menuPos=$(menuId).offset().bottom;
+
+            if(menuPos <= scrTop){
+                menu.removeClass('on');
+                menu.eq(i).addClass('on');
+            }else if(scrTop == $(document).height() - $(window).height()){
+                menu.removeClass('on');
+                menu.last().addClass('on');
+            }
+        })
     }
 
     //header api

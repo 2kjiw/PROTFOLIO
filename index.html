@@ -32,7 +32,7 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header id="header" class="page1">
+    <header id="header">
         <div class="container">
             <nav class="nav">
                 <div class="flex">
@@ -62,16 +62,16 @@
                         </li>
                         <li><a href="#footer" title="contact">contact</a></li>
                     </ul>
-                </div>
-                <div class="weather">
-                    <p class="weather-text">weather</p>
-                    <p class="weather-icon"></p>
+                    <div class="weather">
+                        <p class="weather-text">weather</p>
+                        <p class="weather-icon"></p>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <!-- 헤더 끝(메뉴바) -->
-    <section id="section1" class="page2 page">
+    <section id="section1">
         <div class="container">
             <h1>
                 <svg width="500" height="199" viewBox="0 0 500 199" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,17 +105,16 @@
         </div>
     </section>
     <!-- 1페이지 끝 -->
-    <section id="section2" class="page3 page">
+    <section id="section2" class="page">
         <h3>About me</h3>
         <div class="aboutme">
             <div class="container">
                 <div class="aboutme-wrap">
                     <div class="profile">
-                        <a href="#">
-                            <span>강지우 2002.02.04</span>
-                            <span>010-5553-6952</span>
-                            <span>useknag24@gmail.com</span>
-                        </a>
+                        <div class="jiw"></div>
+                        <span>강지우 2002.02.04</span>
+                        <span>010-5553-6952</span>
+                        <span>useknag24@gmail.com</span>
                     </div>
                     <div class="rudfur">
                         <p>2021.06.~2021.10. 수원정보과학고등학교 졸업</p>
@@ -228,14 +227,14 @@
         </div>
     </section>
     <!-- 2페이지 끝(about me) -->
-    <section id="section3" class="page4 page">
+    <section id="section3" class="page">
         <h3>Project</h3>
         <div id="project-web">
             <h4>web</h4>
             <div class="web-area">
                 <ul class="web-wrap">
                     <li class="on">
-                        <div class="web-img"><img src="./img/protfolio.png" alt=""></div>
+                        <div class="web-img"><img src="./img/protfolio.png" alt="용인시청 대표포털 이미지"></div>
                         <div class="web-text">
                             <p class="title">용인시청대표포털 클론코딩</p>
                             <p class="point">
@@ -261,42 +260,103 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="web-ex">첫 코딩 작업물로 용인시청대표포털을 클론코딩 하였다. 메인 페이지, 로그인 페이지, 회원가입 페이지를 작업하였다.</p>
                             <a href="http://jiwoo0204.dothome.co.kr/01_project1/indexre.html" title="용인시청대표포털클론코딩" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </li>
                     <li>
+                        <div class="web-img"><img src="./img/protfolio.png" alt="신라호텔 이미지"></div>
                         <div class="web-text">
-                            <p></p>
+                            <p class="title">신라호텔 반응형</p>
                             <p class="point">
                                 <span>웹표준</span>
+                                <span>반응형</span>
                                 <span>HTML5</span>
                                 <span>CSS3</span>
                                 <span>jquery</span>
                             </p>
+                            <table>
+                                <caption>신라호텔 반응형 상세사항</caption>
+                                <colgroup>
+                                    <col class="w3">
+                                    <col class="w7">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>작업기간</th>
+                                        <td>22.05.27~22.07.31</td>
+                                    </tr>
+                                    <tr>
+                                        <th>참여도</th>
+                                        <td>개인작업 100%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="web-ex">반응형 웹 작업으로 신라호텔 사이트를 골랐으며 해당 사이트의 디자인을 크게 해하지 않는 선에서 태블릿, 모바일 사이즈의 웹디자인을 작업하였다.</p>
                             <a href="./05_반응형/index.html" title="신라호텔" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </li>
                     <li>
+                        <div class="web-img"><img src="./img/protfolio.png" alt="스튜디오 달고나 이미지"></div>
                         <div class="web-text">
-                            <p></p>
+                            <p class="title">스튜디오 달고나 모바일</p>
                             <p class="point">
                                 <span>웹표준</span>
+                                <span>모바일</span>
                                 <span>HTML5</span>
-                                <span>CSS3</span>
+                                <span>SCSS</span>
                                 <span>jquery</span>
                             </p>
+                            <table>
+                                <caption>스튜디오 달고나 상세사항</caption>
+                                <colgroup>
+                                    <col class="w3">
+                                    <col class="w7">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>작업기간</th>
+                                        <td>22.05.27~22.07.31</td>
+                                    </tr>
+                                    <tr>
+                                        <th>참여도</th>
+                                        <td>개인작업 100%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="web-ex">모바일 디자인 작업으로 팬시 스토어인 스튜디오 달고나 사이트를 직접 디자인하였다. 밝고 따뜻한 색상을 위주로 작업하였으며 팬시 디자인 자체가 아기자기하고 복잡한 느낌이 있기에 웹디자인은 최대한 심플하게 작업하였다.</p>
                             <a href="./07_STUDIO DALGONA/index.html" title="스튜디오달고나모바일" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </li>
                     <li>
+                        <div class="web-img"><img src="./img/protfolio.png" alt="스튜디오 달고나 이미지"></div>
                         <div class="web-text">
-                            <p></p>
+                            <p class="title">포트폴리오</p>
                             <p class="point">
                                 <span>웹표준</span>
+                                <span>반응형</span>
                                 <span>HTML5</span>
-                                <span>CSS3</span>
+                                <span>SCSS</span>
                                 <span>jquery</span>
                             </p>
+                            <table>
+                                <caption>포트폴리오 상세사항</caption>
+                                <colgroup>
+                                    <col class="w3">
+                                    <col class="w7">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>작업기간</th>
+                                        <td>22.05.27~22.07.31</td>
+                                    </tr>
+                                    <tr>
+                                        <th>참여도</th>
+                                        <td>개인작업 100%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="web-ex">지금껏 배운 것을 토대로 작업을 진행하였으며, 푸른색을 주색으로 사용하였다. 포인트가 되는 내용은 선명한 푸른색과 마젠타 컬러를 이용하여 강조하였다.</p>
                             <a href="./index.html" title="포트폴리오" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </li>
@@ -375,19 +435,32 @@
                     <div class="bigdeproject-wrap">
                         <img src="https://cdn.pixabay.com/photo/2016/11/06/19/42/cat-1803904__340.jpg" alt="">
                     </div>
-                    <button class="btn">닫기</button>
+                    <p>*검은바탕을 누르셔도 해당 창을 닫을 수 있습니다.</p>
+                    <button class="btn"><i class="fas fa-times"></i></button>
                 </div>
             </div>
             <!-- 디자인 프로젝트 끝 -->
         </div>
     </section>
     <!-- 3페이지 끝(project) -->
-    <footer id="footer" class="page5 page">
+    <footer id="footer" class="page">
         <div class="container">
             <h3>Contact</h3>
             <div class="contact-wrap">
-                <h6><a href="#"><i class="far fa-envelope"></i></a></h6>
-                <div class="contact-none"></div>
+                <div class="contact-form">
+                    <form action="action_page">
+                        <label for="fname">Name</label>
+                        <input type="text" id="fname" name="name" placeholder="Write down your name">
+                        <label for="femail">Email</label>
+                        <input type="text" id="femail" name="email" placeholder="Write down your email">
+                        <label for="fmessage">Massage</label>
+                        <textarea name="message" id="fmessage">Write down the message you want to send me</textarea>
+                        <button type="submit">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div class="contact-me">
+                    <a href="" target="_blank" title="이력서&자기소개서">이력서 보기<i class="fas fa-external-link-alt"></i></a>
+                </div>
             </div>
         </div>
     </footer>

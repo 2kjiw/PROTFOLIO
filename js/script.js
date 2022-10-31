@@ -99,6 +99,7 @@ $(function(){
     let bigde=$('.bigdeproject');
     let bigdeimg=$('.bigdeproject>.bigdeproject-wrap');
     let closeBtn=$('.btn');
+    let closeBg=$('.bigdeproject');
 
     design.click(function(e){
         let tg=$(this);
@@ -110,6 +111,10 @@ $(function(){
         bigdeimg.eq(i).addClass('on');
     });
     closeBtn.click(function(e){
+        e.preventDefault();
+        bigde.fadeOut();
+    });
+    closeBg.click(function(e){
         e.preventDefault();
         bigde.fadeOut();
     });

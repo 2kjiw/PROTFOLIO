@@ -52,20 +52,38 @@ body{
         .container{
             .nav{
                 width: 100%; height: 70px;
-                display: flex; justify-content: space-between; align-items: center;
+                display: flex; display: -ms-flex; display: -webkit-flex;
+                justify-content: space-between; align-items: center;
                 .flex{
-                    width: auto;
-                    display: flex; justify-content: space-evenly; align-items: center;
+                    width: 100%;
+                    display: flex; display: -ms-flex; display: -webkit-flex;
+                    justify-content: space-between; align-items: center;
                     h2{
                         margin-right: 30px;
+                        >svg{width: 100%;}
+                        @media (max-width: 640px) {
+                            margin-right: 5px;
+                        }
+                        @media (max-width: 575px) {
+                            width: 45px;
+                        }
                     }
                     >ul{
-                        display: flex;
+                        display: flex; display: -ms-flex; display: -webkit-flex;
                         >li{
                             position: relative;
                             >a{
                                 font-weight: bold; font-size: 18px; text-transform: uppercase;
                                 padding: 3px 10px;
+                                @media (max-width: 760px) {
+                                    font-size: 16px; white-space: nowrap;
+                                }
+                                @media (max-width: 660px) {
+                                    font-size: 14px;
+                                }
+                                @media (max-width: 660px) {
+                                    font-size: 13px;
+                                }
                             }
                             &:last-child{
                                 a{
@@ -109,19 +127,20 @@ body{
                             }
                         }
                     }
-
-                }
-                .weather{
-                    .weather-text{
-                        font-size: 10px;
-                        position: relative; top: 10px; left: 60%;
-                        transform: translateX(-50%);
-                    }
-                    .weather-icon{
-                        width: 50px; height: 50px;
-                        img{
-                            width: 100%;
-                            filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+                    .weather{
+                        text-align: center;
+                        .weather-text{
+                            font-size: 10px;
+                        }
+                        .weather-icon{
+                            width: 50px; height: 50px;
+                            @media (max-width: 660px) {
+                                width: 35px; height: 35px; margin-left: 5px;
+                            }
+                            img{
+                                width: 100%;
+                                filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+                            }
                         }
                     }
                 }
@@ -166,28 +185,57 @@ body{
             margin-bottom: 100px;
         }
         .aboutme{
-            padding: 20px 0; margin-bottom: 70px;
+            padding: 20px 0; margin-bottom: 70px; height: 220px;
             background: rgba($color: #DBF2FF, $alpha: .2);
+            font-size: 16px;
+            @media (max-width: 1230px) {
+                font-size: 14px;
+                .rudfur{margin: 0 15px;}
+            }
+            @media (max-width: 885px) {
+                .rudfur{margin: 0 10px;}
+            }
+            @media (max-width: 850px) {
+                font-size: 12px;
+                .rudfur{margin: 0 10px 0 8px;}
+            }
+            @media (max-width: 750px) {
+                height: auto; text-align: center; font-size: 14px;
+                .aboutme-wrap{flex-direction: column;
+                    .profile{
+                        width: 270px; height: 350px; margin: -60px auto 0 auto;
+                    }
+                    .rudfur{
+                        margin: 45px auto 30px auto;
+                    }
+                    .certificate{
+                        margin: 0 auto;
+                    }
+                }
+            }
             .container{
+                position: relative;
                 .aboutme-wrap{
                     display: flex; justify-content: space-evenly;
-                    white-space: nowrap; font-size: 18px; line-height: 180%;
-                    @media (max-width:1000px) {
-                        .rudfur{margin: 0 20px;}
-                    }
-                    @media (max-width:750px) {
-                        font-size: 12px;
-                        .rudfur{margin: 0 15px;}
-                    }
-                    @media (max-width:640px) {
-                        flex-direction: column; font-size: 12px;
-                        .rudfur{margin: 20px 0;}
-                    }
-                    .profile{
-                        a{
-                            >span{
-                                display: block;
+                    white-space: nowrap; line-height: 180%;
+                    >div{
+                        display: inline-block;
+                        &.profile{
+                            margin-top: -63px; box-shadow: 0 0 3px rgba($color: $main, $alpha: .45);
+                            padding: 30px 50px; background: $white;
+                            display: flex; display: -ms-flex; display: -webkit-flex;
+                            flex-direction: column; align-items: center; justify-content: center;
+                            transform: rotate(-5deg);
+                            .jiw{
+                                width: 135px; height: 170px; background: #DBF2FF;
+                                margin-bottom: 10px;
                             }
+                            >span{
+    
+                            }
+                        }
+                        &.rudfur{
+
                         }
                     }
                 }
@@ -234,8 +282,8 @@ body{
                         }
                     }
                     &.design-skill{
-                        @media (max-width:1265px) {
-                            margin-top: 20px;
+                        @media (max-width: 1090px) {
+                            margin-top: 50px;
                         }
                         h5{
                             width: 115px; color: magenta;
@@ -302,24 +350,23 @@ body{
         padding: 100px 0; position: relative;
         #project-web{
             margin-top: 70px; margin-bottom: 250px;
-            h4{}
+            h4{margin-bottom: 20px;}
             .web-area{
                 margin: 0 auto; position: relative;
-                
                 .web-wrap{
                     width: 100%; height: 650px; overflow: hidden;
                     display: flex; align-items: center;
-                    transform: translate(0px); background-color: rgb(77, 46, 46);
+                    transform: translate(0px);
                     li{
-                        width: 70%; height: 90%; background-color: rgb(153, 96, 96);
+                        width: 65%; height: 90%;
                         border-radius: 20px; padding: 0 20px; margin-left: 30px;
                         flex-shrink: 0; box-shadow: 0 0 5px $main;
-                        display: flex; align-items: center;
+                        display: flex; align-items: center; margin: 0 30px;
                         &.on{
                             height: 98%;
                         }
                         .web-img{
-                            width: 60%; height: 90%; overflow: hidden;
+                            height: 90%; overflow: hidden; transition: .3s;
                             img{
                                 width: 100%;
                             }
@@ -327,7 +374,7 @@ body{
                         .web-text{
                             margin-left: 30px; height: 70%;
                             .title{
-                                font-size: 24px; font-weight: 600;
+                                font-size: 24px; font-weight: 600; white-space: nowrap;
                             }
                             .point{
                                 margin-bottom: 30px;
@@ -340,7 +387,7 @@ body{
                                 }
                             }
                             table{
-                                border-spacing: 0 7px; font-size: 18px;
+                                border-spacing: 0 7px; font-size: 16px;
                                 caption{display: none;}
                                 colgroup{
                                     .w3{width: 40%;}
@@ -351,6 +398,10 @@ body{
 
                                     }
                                 }
+                            }
+                            .web-ex{
+                                font-size: 16px; text-align: justify; margin-top: 20px;
+                                line-height: 150%;
                             }
                             a{
                                 display: block; font-size: 18px; white-space: nowrap;
@@ -439,22 +490,28 @@ body{
                 }
                 .bigdeproject{
                     position: fixed; top: 0; left: 0;
-                    width: 100%; height: 100%;
+                    width: 100%; height: 100%; z-index: 9999999;
                     background: rgba(66, 57, 72, .5);
                     display: none;
                     .bigdeproject-wrap{
-                        display: none;
-                        position: absolute;
+                        display: none; position: absolute;
                         top: 50%; left: 50%; transform: translate(-50%, -50%);
+                        width: 70%; height: 70%;
+                        img{
+                            width: 100%;
+                        }
                         &.on{
                             display: block;
                         }
                     }
+                    >p{
+                        position: absolute; top: 12%; left: 17%; color: #333;
+                    }
                     .btn{
-                        width: 100px; height: 30px; cursor: pointer;
-                        border: none; background: $main; color: #fff;
-                        position: fixed; bottom: 20%; right: 20%;
-                        font-weight: 600; font-size: 16px;
+                        width: 50px; height: 50px; cursor: pointer;
+                        border: none; border-radius: 50%; background: $main;
+                        position: fixed; top: 12%; left: 14%;
+                        font-weight: 600; font-size: 24px; color: #fff;
                     }
                 }
             }
@@ -467,11 +524,50 @@ body{
         background: url(../img/footer.svg) no-repeat -50px bottom;
         .container{
             h3{
-                margin-top: 80px;
+                margin: 80px 0;
             }
             .contact-wrap{
-                h6{
-                    font-size: 85px; text-align: center; margin-top: 20px;
+                display: flex; display: -ms-flexbox; display: -webkit-flex;
+                .contact-form{
+                    padding: 50px; background: rgba($color: $white, $alpha: .5);
+                    border-radius: 30px; box-shadow: 0 0 5px #efefef;
+                    form{
+                        label{
+                            font-size: 16px; font-weight: 600;
+                        }
+                        input{
+                            border: none; font-size: 14px; display: block;
+                            margin-top: 5px; margin-bottom: 15px; background: transparent;
+                            &[type=text]{
+                                padding: 5px; width: 350px; border-bottom: 1px solid $main;
+                            }
+                            &#fmessage{
+                                height: 200px;
+                            }
+                        }
+                        textarea{
+                            display: block; border: none; font-size: 14px;
+                            margin-top: 5px; margin-bottom: 15px; padding: 5px;
+                            width: 350px; height: 200px; border-bottom: 1px solid $main;
+                            color: rgb(118, 118, 118); background: transparent;
+                        }
+                        button{
+                            cursor: pointer; border-radius: 50px; padding: 5px 15px;
+                            font-weight: 600; background: $main; color: $white;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .contact-me{
+                    width: 50%;
+                    >a{
+                        border: 1px solid $main; padding: 10px 20px; border-radius: 10px;
+                        font-size: 16px; font-weight: 600; transition: .3s;
+                        &:hover{
+                            background-color: $main; color: $white;
+                        }
+                        i{margin-left: 7px;}
+                    }
                 }
             }
         }
