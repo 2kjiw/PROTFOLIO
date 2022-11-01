@@ -40,31 +40,30 @@ $(function(){
 
 
     //project
-    let project=$('.web-wrap');
+    let project=$('.web-wrap'); //움직이려는 ul
     let projectList=$('.web-wrap>li');
-    let proWidth=projectList.width();
+    let projectListOn=$('.web-wrap>li.on'); //on되어 있는 li
     let current=0;
+    let current1=1;
     let timer=null;
     let prev=$('.slidebtn>.prev');
     let next=$('.slidebtn>.next');
 
+    /* 수정하려는 부분 */
     // slide();
-    // function slide(){
-    //     timer=setInterval(function(){
-    //         project.stop().animate({transform: `translate(${-proWidth}+'px')`},500, function(){
-    //             /* var i=$('.web-wrap>li.on').index();
-    //             console.log(i) */
-    //             projectList.removeClass('on').eq((current++)).addClass('on');
-    //             if(current===projectList.size()) current=0;
-    //         })
-    //     },3000)
-    // }
-
-    function move(tg, strat, end){
-        tg.css('left',strat).stop().animate({left:end})
+    function slide(){
+        timer=setInterval(function(){
+            project.stop().animate({left: '+= -60%'},500, function(){
+                $(this).children('li:first').insertAfter($(this).children('li:last'));
+                
+                /* projectList.removeClass('on').eq((current1++)).addClass('on');
+                if(current===projectList.size()) current=0; */
+                if(current===projectList.size()) current=0;
+            })
+        },3000)
     }
 
-    $('.web-wrap').hover(function(){
+    /* $('.web-wrap').hover(function(){
         clearInterval(timer);
     },function(){
         // slide();
@@ -91,7 +90,7 @@ $(function(){
         if(current==-project.size()){current=0}
         let next=project.eq(current)
         move(next, '-100%', 0);
-    });
+    }); */
 
 
     //design-wrap
