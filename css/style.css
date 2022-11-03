@@ -467,11 +467,6 @@ body #section3 #project-web .web-area .web-areawrap {
   overflow: hidden;
 }
 body #section3 #project-web .web-area .web-areawrap .web-wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  left: 0;
-  display: flex;
   align-items: center;
 }
 body #section3 #project-web .web-area .web-areawrap .web-wrap li {
@@ -479,7 +474,6 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li {
   height: 90%;
   border-radius: 20px;
   padding: 0 20px;
-  flex-shrink: 0;
   box-shadow: 0 0 5px #4384F7;
   display: flex;
   display: -ms-flex;
@@ -560,24 +554,14 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a:hov
   background: #4384F7;
   color: #fefefe;
 }
-body #section3 #project-web .web-area .slidebtn {
-  margin: 0 auto;
+body #section3 #project-web .web-area .btnborder {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  background: #222;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-}
-body #section3 #project-web .web-area .slidebtn li {
-  font-size: 40px;
-  position: absolute;
-}
-body #section3 #project-web .web-area .slidebtn li.prev {
-  left: 50px;
-}
-body #section3 #project-web .web-area .slidebtn li.next {
-  left: calc(100vw - 100px);
-}
-body #section3 #project-web .web-area .slidebtn li a {
-  color: #4384F7;
+  right: 0;
 }
 body #section3 .container #project-design .design-wrap {
   margin-top: 50px;

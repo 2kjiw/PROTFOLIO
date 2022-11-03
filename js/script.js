@@ -40,57 +40,29 @@ $(function(){
 
 
     //project
-    let project=$('.web-wrap'); //움직이려는 ul
-    let projectList=$('.web-wrap>li');
-    let projectListOn=$('.web-wrap>li.on'); //on되어 있는 li
-    let current=0;
-    let current1=1;
-    let timer=null;
-    let prev=$('.slidebtn>.prev');
-    let next=$('.slidebtn>.next');
-
-    /* 수정하려는 부분 */
-    // slide();
-    function slide(){
-        timer=setInterval(function(){
-            project.stop().animate({left: '+= -60%'},500, function(){
-                $(this).children('li:first').insertAfter($(this).children('li:last'));
-                
-                /* projectList.removeClass('on').eq((current1++)).addClass('on');
-                if(current===projectList.size()) current=0; */
-                if(current===projectList.size()) current=0;
-            })
-        },3000)
-    }
-
-    /* $('.web-wrap').hover(function(){
-        clearInterval(timer);
-    },function(){
-        // slide();
-    })
-
-    next.click(function(){
-        clearInterval(timer);
+    //swiper-slider
+    let swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+        disableOnInteraction: false
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+        on: {
+        activeIndexChange: function(){
+            // console.log(this.realIndex)
+            let bgColors=['#d8e22d','#3d435f','#c81b21','#3d435f','#f34689','#3d435f'];
+            let bgColorIdx=bgColors[this.realIndex];
     
-        let prev=project.eq(current);
-        move(prev, 0 ,'-100%');
-        current++;
-
-        if(current==project.size()){current=0}
-        let next=project.eq(current)
-        move(next, '100%', 0);
-    })
-    prev.click(function(){
-        clearInterval(timer);
-    
-        let prev=project.eq(current);
-        move(prev, 0 , '100%');
-        current--;
-
-        if(current==-project.size()){current=0}
-        let next=project.eq(current)
-        move(next, '-100%', 0);
-    }); */
+            $('.bg').css('background', bgColorIdx);
+        }
+        }
+    });
 
 
     //design-wrap

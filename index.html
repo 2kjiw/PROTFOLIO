@@ -22,12 +22,15 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <!-- custom style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff"> -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/scroll.js" defer></script> <!-- 헤더와 스크롤 이벤트 -->
     <script src="js/script.js" defer></script>
 </head>
@@ -233,9 +236,9 @@
         <div id="project-web">
             <h4>web</h4>
             <div class="web-area">
-                <div class="web-areawrap">
-                    <ul class="web-wrap">
-                        <li class="on">
+                <div class="web-areawrap swiper mySwiper slides">
+                    <ul class="web-wrap swiper-wrapper slide-wrapper">
+                        <li class="on swiper-slide slide">
                             <div class="web-img"><img src="./img/protfolio.png" alt="용인시청 대표포털 이미지"></div>
                             <div class="web-text">
                                 <p class="title">용인시청대표포털 클론코딩</p>
@@ -266,7 +269,7 @@
                                 <a href="http://jiwoo0204.dothome.co.kr/01_project1/indexre.html" title="용인시청대표포털클론코딩" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </li>
-                        <li>
+                        <li class="swiper-slide slide">
                             <div class="web-img"><img src="./img/protfolio.png" alt="신라호텔 이미지"></div>
                             <div class="web-text">
                                 <p class="title">신라호텔 반응형</p>
@@ -298,7 +301,7 @@
                                 <a href="./05_반응형/index.html" title="신라호텔" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </li>
-                        <li>
+                        <li class="swiper-slide slide">
                             <div class="web-img"><img src="./img/protfolio.png" alt="스튜디오 달고나 이미지"></div>
                             <div class="web-text">
                                 <p class="title">스튜디오 달고나 모바일</p>
@@ -330,7 +333,7 @@
                                 <a href="./07_STUDIO DALGONA/index.html" title="스튜디오달고나모바일" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </li>
-                        <li>
+                        <li class="swiper-slide slide">
                             <div class="web-img"><img src="./img/protfolio.png" alt="스튜디오 달고나 이미지"></div>
                             <div class="web-text">
                                 <p class="title">포트폴리오</p>
@@ -364,10 +367,8 @@
                         </li>
                     </ul>
                 </div>
-                <ul class="slidebtn">
-                    <li class="prev"><a href="javascript:"><i class="fas fa-chevron-left"></i></a></li>
-                    <li class="next"><a href="javascript:"><i class="fas fa-chevron-right"></i></a></li>
-                </ul>
+                <div class="btnborder"><div class="swiper-button-next slide-arrow-right"></div></div>
+                <div class="btnborder"><div class="swiper-button-prev slide-arrow-left"></div></div>
             </div>
         </div>
         <div class="container">
