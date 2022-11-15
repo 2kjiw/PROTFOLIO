@@ -47,20 +47,16 @@ $(function(){
         loop: true,
         centeredSlides: true,
         autoplay: {
-        disableOnInteraction: false
+            disableOnInteraction: false
         },
         navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
         on: {
-        activeIndexChange: function(){
-            // console.log(this.realIndex)
-            let bgColors=['#d8e22d','#3d435f','#c81b21','#3d435f','#f34689','#3d435f'];
-            let bgColorIdx=bgColors[this.realIndex];
-    
-            $('.bg').css('background', bgColorIdx);
-        }
+            slideChange: function () {
+                /* $('.mySwiper>li').eq(this.realIndex).addClass('on'); */
+            }
         }
     });
 
@@ -88,6 +84,12 @@ $(function(){
     closeBg.click(function(e){
         e.preventDefault();
         bigde.fadeOut();
+    });
+
+
+    //email send
+    $('.email-send').click(function(){
+        alert('이메일이 전송되었습니다. 감사합니다. 좋은 하루 되시기 바랍니다.');
     });
 
     
