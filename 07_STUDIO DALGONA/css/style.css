@@ -4,10 +4,10 @@ body{background: rgb(255, 231, 164); height: 100vh}
     width: 482px;
     height: 980px;
     position: absolute;
-    top: 100%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(../iPhone\ 13\ Pro\ Max\ &\ S22\ Ultra\ Animated\ -\ Free\ Sample.png) no-repeat;
+    background: url(../iPhone\ 13\ Pro\ Max\ _\ S22\ Ultra\ Animated\ -\ Free\ Sample.png) no-repeat;
     background-size: 89%;
 }
 .phone .content{

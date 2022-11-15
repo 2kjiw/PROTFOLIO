@@ -174,13 +174,11 @@
     }
     #sectionMypage3{
         width: 100%;
-        padding-bottom: 100px;
         .container{
             .user-help{
                 ul{
-                    display: grid;
-                    grid-template-columns: repeat(4, minmax(60px, 1fr));
-                    grid-template-rows: repeat(2, minmax(85px, 1fr));
+                    // display: flex;
+                    justify-content: space-around;
                     vertical-align: middle;
                     align-items: center;
                     width: 100%;

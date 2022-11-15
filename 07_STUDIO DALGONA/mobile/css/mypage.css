@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
 /* 변수 */
 body {
-  background: #fff;
   font-family: "Noto Sans KR", sans-serif;
 }
 body::-webkit-scrollbar {
@@ -21,64 +20,49 @@ body::-webkit-scrollbar-track {
   padding: 0 20px;
 }
 
-.loding {
+#loding {
   width: 100%;
   height: 100%;
   background-color: #fff;
   display: none;
+  z-index: 999;
 }
-.loding .shopbars {
+#loding .shopbars {
   width: 100%;
   display: flex;
 }
-.loding .shopbars .shopbar {
+#loding .shopbars .shopbar {
   flex-basis: 12.5%;
   height: 73px;
   border-radius: 0 0 50% 50%;
 }
-.loding .shopbars .shop-bar1 {
+#loding .shopbars .shop-bar1 {
   background-color: #fcb712;
 }
-.loding .shopbars .shop-bar2 {
+#loding .shopbars .shop-bar2 {
   background-color: #ffdd00;
 }
-.loding .loding-logo {
+#loding .loding-logo {
   width: 200px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loding .loding-logo img {
+#loding .loding-logo img {
   width: 100%;
 }
 
 #wrap {
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
-}
-#wrap #header #top-btn a {
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: rgba(158, 98, 44, 0.6);
-  color: #fefefe;
-  font-size: 12px;
-  transition: 0.5s;
 }
 #wrap #header #menu {
   display: none;
   position: absolute;
   top: 55px;
-  z-index: 99999;
+  z-index: 997;
   background: #fefefe;
   width: 100%;
 }
@@ -105,26 +89,29 @@ body::-webkit-scrollbar-track {
   right: 0;
   top: 20px;
 }
-#wrap #header #menu .menu-lists li.menu-list ul {
-  background: #f0f0f0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+#wrap #header #menu .menu-lists li.menu-list:first-child > div {
+  display: block;
 }
-#wrap #header #menu .menu-lists li.menu-list ul li {
+#wrap #header #menu .menu-lists li.menu-list > div {
+  display: none;
+}
+#wrap #header #menu .menu-lists li.menu-list > div ul {
+  background: #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  padding-left: 45px;
+  padding-right: 35px;
+  text-align: center;
+}
+#wrap #header #menu .menu-lists li.menu-list > div ul li {
   border: none;
 }
-#wrap #header #menu .menu-lists li.menu-list ul li:first-child {
-  padding: 0 0 0 70px;
-}
-#wrap #header #menu .menu-lists li.menu-list ul li:nth-child(5n) {
-  padding: 0 0 0 70px;
-}
-#wrap #header #menu .menu-lists li.menu-list ul li a {
-  padding: 10px;
+#wrap #header #menu .menu-lists li.menu-list > div ul li a {
+  padding: 10px 0;
   line-height: 15px;
+  white-space: nowrap;
 }
-#wrap #header #menu .menu-lists li.menu-list ul li.on a {
+#wrap #header #menu .menu-lists li.menu-list > div ul li.on a {
   color: #fcb712;
 }
 #wrap #header #menu .menu-lists li.menu-list.on i {
@@ -170,7 +157,7 @@ body::-webkit-scrollbar-track {
   background-color: #fefefe;
   border-bottom: 1px solid #ddd;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
 }
 #wrap #header .header-top .container {
   height: 54px;
@@ -181,27 +168,45 @@ body::-webkit-scrollbar-track {
 }
 #wrap #header .header-top .container span {
   display: block;
+  width: 22px;
+  height: 15px;
+  position: relative;
+}
+#wrap #header .header-top .container span .menu-btn {
+  display: block;
 }
 #wrap #header .header-top .container span .menu-btn .menu-bar {
   display: block;
-  width: 22px;
+  width: 100%;
   height: 3.5px;
   background: #9e622c;
   border-radius: 1px;
-  margin-bottom: 4.5px;
-  position: relative;
+  position: absolute;
+  transition: 0.3s;
 }
 #wrap #header .header-top .container span .menu-btn .menu-bar1 {
   top: 0;
   left: 0;
 }
 #wrap #header .header-top .container span .menu-btn .menu-bar2 {
+  top: 50%;
+  left: 0;
   opacity: 1;
 }
 #wrap #header .header-top .container span .menu-btn .menu-bar3 {
-  margin-bottom: 0;
-  top: 0;
+  top: 100%;
   left: 0;
+}
+#wrap #header .header-top .container span.on .menu-btn .menu-bar1 {
+  top: 50%;
+  transform: rotate(45deg);
+}
+#wrap #header .header-top .container span.on .menu-btn .menu-bar2 {
+  opacity: 0;
+}
+#wrap #header .header-top .container span.on .menu-btn .menu-bar3 {
+  top: 50%;
+  transform: rotate(-45deg);
 }
 #wrap #header .header-top .container .header-logo {
   width: 150px;
@@ -226,7 +231,7 @@ body::-webkit-scrollbar-track {
   position: relative;
   top: 55px;
   border-bottom: 1px solid #ddd;
-  z-index: 998;
+  z-index: 996;
   background: #fefefe;
 }
 #wrap #header .header-bottom .container .nav {
@@ -252,6 +257,16 @@ body::-webkit-scrollbar-track {
   font-weight: 500;
   color: #fcb712;
 }
+#wrap .menu-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.7);
+  z-index: 996;
+  display: none;
+}
 #wrap #section1 {
   width: 100%;
   height: 162px;
@@ -263,25 +278,25 @@ body::-webkit-scrollbar-track {
   display: block;
   clear: both;
 }
+#wrap #section1 .slide-box {
+  width: 100%;
+}
 #wrap #section1 .slide-box .slide-imgs {
   width: 100%;
+  max-width: 392px;
   height: 162px;
   overflow: hidden;
   position: relative;
-  text-align: center;
 }
 #wrap #section1 .slide-box .slide-imgs li {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 130%;
-  text-align: center;
+  left: 100%;
 }
 #wrap #section1 .slide-box .slide-imgs li img {
+  text-align: center;
   height: 100%;
-  position: relative;
-  left: 40%;
-  transform: translateX(-50%);
 }
 #wrap #section1 .slide-box .slide-imgs li:first-child {
   left: 0;
@@ -548,6 +563,7 @@ body::-webkit-scrollbar-track {
   left: 0;
   box-shadow: 0 -5px 5px #ddd;
   background: #fefefe;
+  z-index: 999;
 }
 #wrap #quick-layer .container .quick-box {
   height: 80px;
@@ -563,6 +579,22 @@ body::-webkit-scrollbar-track {
 }
 #wrap #quick-layer .container .quick-box li.on a {
   color: #fcb712;
+}
+#wrap #top-btn a {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(158, 98, 44, 0.6);
+  color: #fefefe;
+  font-size: 12px;
+  transition: 0.5s;
 }
 
 #wrap #herderMypage {
@@ -731,12 +763,9 @@ body::-webkit-scrollbar-track {
 }
 #wrap #sectionMypage3 {
   width: 100%;
-  padding-bottom: 100px;
 }
 #wrap #sectionMypage3 .container .user-help ul {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(60px, 1fr));
-  grid-template-rows: repeat(2, minmax(85px, 1fr));
+  justify-content: space-around;
   vertical-align: middle;
   align-items: center;
   width: 100%;

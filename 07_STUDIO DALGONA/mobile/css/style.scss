@@ -21,7 +21,6 @@ $fs16: 16px;
 $fs12: 12px;
 
 body{
-    background: #fff;
     font-family: 'Noto Sans KR', sans-serif;
     &::-webkit-scrollbar{
         width: 8px;
@@ -38,10 +37,11 @@ body{
 .container{padding: 0 20px;}
 
 
-.loding{
+#loding{
     width: 100%; height: 100%;
     background-color: #fff;
     display: none;
+    z-index: 999;
     .shopbars{
         width: 100%; display: flex;
         .shopbar{flex-basis: 12.5%; height: 73px; border-radius: 0 0 50% 50%;}
@@ -56,32 +56,14 @@ body{
 
 #wrap{
     width: 100%;
-    height: 100vh;
+    height: auto;
     position: relative;
     #header{
-        #top-btn{
-            a{
-                position: fixed;
-                bottom: 100px;
-                right: 20px;
-                display: block;
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                text-align: center;
-                box-sizing: border-box;
-                border-radius: 50%;
-                background: rgba($color: $color3, $alpha: .6);
-                color: $white;
-                font-size: $fs12;
-                transition: .5s;
-            }
-        }
         #menu{
             display: none;
             position: absolute;
             top: 55px;
-            z-index: 99999;
+            z-index: 997;
             background: $white;
             width: 100%;
             .menu-lists{
@@ -97,6 +79,7 @@ body{
                         box-sizing: border-box;
                         padding: 0 190px 0 70px;
                         line-height: 60px;
+                        width: 100%;
                     }
                     i{
                         padding-right: 20px;
@@ -107,26 +90,31 @@ body{
                         right: 0;
                         top: 20px;
                     }
-                    ul{
-                        background: $grey-light;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: flex-start;
-                        li{
-                            border: none;
-                            &:first-child{
-                                padding: 0 0 0 70px;
-                            }
-                            &:nth-child(5n){
-                                padding: 0 0 0 70px;
-                            }
-                            a{
-                                padding: 10px;
-                                line-height: 15px;
-                            }
-                            &.on{
+                    &:first-child{
+                        >div{
+                            display: block;
+                        }
+                    }
+                    >div{
+                        display: none;
+                        ul{
+                            background: $grey-light;
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(70px ,1fr));
+                            padding-left: 45px;
+                            padding-right: 35px;
+                            text-align: center;
+                            li{
+                                border: none;
                                 a{
-                                    color: $color1;
+                                    padding: 10px 0;
+                                    line-height: 15px;
+                                    white-space: nowrap;
+                                }
+                                &.on{
+                                    a{
+                                        color: $color1;
+                                    }
                                 }
                             }
                         }
@@ -184,7 +172,7 @@ body{
             background-color: $white;
             border-bottom: 1px solid $grey;
             width: 100%;
-            z-index: 999;
+            z-index: 998;
             .container{
                 height: 54px;
                 display: flex;
@@ -193,26 +181,46 @@ body{
                 align-items: center;
                 span{
                     display: block;
+                    width: 22px;
+                    height: 15px;
+                    position: relative;
                     .menu-btn{
+                        display: block;
                         .menu-bar{
                             display: block;
-                            width: 22px; height: 3.5px;
+                            width: 100%; height: 3.5px;
                             background: $color3;
                             border-radius: 1px;
-                            margin-bottom: 4.5px;
-                            position: relative;
+                            position: absolute;
+                            transition: .3s;
                         }
                         .menu-bar1{
                             top: 0;
                             left: 0;
                         }
                         .menu-bar2{
+                            top: 50%;
+                            left: 0;
                             opacity: 1;
                         }
                         .menu-bar3{
-                            margin-bottom: 0;
-                            top: 0;
+                            top: 100%;
                             left: 0;
+                        }
+                    }
+                    &.on{
+                        .menu-btn{
+                            .menu-bar1{
+                                top: 50%;
+                                transform: rotate(45deg);
+                            }
+                            .menu-bar2{
+                                opacity: 0;
+                            }
+                            .menu-bar3{
+                                top: 50%;
+                                transform: rotate(-45deg);
+                            }
                         }
                     }
                 }
@@ -240,7 +248,7 @@ body{
             position: relative;
             top: 55px;
             border-bottom: 1px solid $grey;
-            z-index: 998;
+            z-index: 996;
             background: $white;
             .container{
                 .nav{
@@ -269,6 +277,17 @@ body{
             }
         }
     }
+    
+    .menu-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #222, $alpha: .7);
+        z-index: 996;
+        display: none;
+    }
 
     #section1{
         width: 100%;
@@ -281,23 +300,21 @@ body{
             clear: both;
         }
         .slide-box{
+            width: 100%;
             .slide-imgs{
                 width: 100%;
+                max-width: 392px;
                 height: 162px;
                 overflow: hidden;
                 position: relative;
-                text-align: center;
                 li{
                     height: 100%;
                     position: absolute;
                     top: 0;
-                    left: 130%;
-                    text-align: center;
+                    left: 100%;
                     img{
+                        text-align: center;
                         height: 100%;
-                        position: relative;
-                        left: 40%;
-                        transform: translateX(-50%);
                     }
                     &:first-child{left: 0;}
                 }
@@ -594,6 +611,7 @@ body{
         left: 0;
         box-shadow: 0 -5px 5px $grey;
         background: $white;
+        z-index: 999;
         .container{
             .quick-box{
                 height: 80px;
@@ -614,6 +632,25 @@ body{
                     }
                 }
             }
+        }
+    }
+
+    #top-btn{
+        a{
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background: rgba($color: $color3, $alpha: .6);
+            color: $white;
+            font-size: $fs12;
+            transition: .5s;
         }
     }
 }

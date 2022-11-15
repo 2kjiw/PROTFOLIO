@@ -1,0 +1,16 @@
+디자인
+
+영문필기체
+https://fonts.google.com/betterspecimen/Oleo+Script+Swash+Caps
+https://fonts.google.com/betterspecimen/Dancing+Script
+https://fonts.google.com/betterspecimen/Pacifico
+
+동글캡
+https://fonts.google.com/betterspecimen/Jua?category=Sans+Serif&subset=korean&preview.text=%ED%95%9C%EA%B8%80&preview.text_type=custom
+
+모바일
+
+폰트사이즈 15~10px
+헤더높이 40~90px
+슬라이드 이미지 높이 125~440px
+상품 이미지 100~170px
