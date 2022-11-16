@@ -4,10 +4,6 @@ $(function(){
     let section1He=$('#section1');
     let section1Height = section1He.height();
     let $menu=$('.nav>.flex>ul>li');
-    let sec2=$('#section2').position().top;
-    let sec3=$('#section3').position().top;
-    let sec4=$('#footer').position().top;
-    let pageidx=$('.page').eq();
     // console.log(section1Height);
     
     $(window).scroll(function(){
