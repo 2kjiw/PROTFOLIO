@@ -43,9 +43,9 @@ $(function(){
     //swiper-slider
     let swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
-        spaceBetween: 0,
-        loop: true,
+        loop: false,
         centeredSlides: true,
+        /* effect: 'coverflow', */
         autoplay: {
             disableOnInteraction: false
         },
@@ -55,9 +55,19 @@ $(function(){
         },
         on: {
             slideChange: function () {
-                /* $('.mySwiper>li').eq(this.realIndex).addClass('on'); */
+                $('.web-wrap>li').removeClass('on');
+                $('.web-wrap>li').eq(this.realIndex).addClass('on');
             }
         }
+    });
+
+    $(".mySwiper").each(function(elem, target){
+        var swp = target.swiper;
+        $(this).hover(function() {
+            swp.autoplay.stop();
+        }, function() {
+            swp.autoplay.start();
+        });
     });
 
 
@@ -65,8 +75,7 @@ $(function(){
     let design=$('.design-wrap>li');
     let bigde=$('.bigdeproject');
     let bigdeimg=$('.bigdeproject>.bigdeproject-wrap');
-    let closeBtn=$('.btn');
-    let closeBg=$('.bigdeproject');
+    let closeBtn=$('.bigdeproject');
 
     design.click(function(e){
         let tg=$(this);
@@ -81,15 +90,11 @@ $(function(){
         e.preventDefault();
         bigde.fadeOut();
     });
-    closeBg.click(function(e){
-        e.preventDefault();
-        bigde.fadeOut();
-    });
 
 
     //email send
     $('.email-send').click(function(){
-        alert('이메일이 전송되었습니다. 감사합니다. 좋은 하루 되시기 바랍니다.');
+        alert('연락 주셔서 감사합니다! 좋은 하루 되시기 바랍니다 :)');
     });
 
     

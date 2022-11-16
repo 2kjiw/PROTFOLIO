@@ -24,9 +24,8 @@
     <!-- custom style -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.scss"> scss 링크 -->
 
-
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff"> -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -69,7 +68,7 @@
             </h1>
         </div>
     </section>
-    <!-- 1페이지 끝 -->
+    <!-- 1페이지 끝(표지) -->
     <section id="section2" class="page">
         <h3>About me</h3>
         <div class="aboutme">
@@ -77,11 +76,14 @@
                 <div class="aboutme-wrap">
                     <div class="profile">
                         <div class="jiw"><img src="./img/증명사진.jpg" alt="증명사진"></div>
-                        <span>강지우 2002.02.04</span>
+                        <span style="margin-top: 5px;">강지우 2002.02.04</span>
                         <span>010-5553-6952</span>
                         <span>useknag24@gmail.com</span>
+                        <div class="clip">
+                            <img src="./img/clip.svg" alt="클립이미지">
+                        </div>
                     </div>
-                    <div class="rudfur">
+                    <div class="career">
                         <p>2021.06.~2021.10. 본글라스 그래픽디자이너 근무</p>
                         <p>2021.02. 수원정보과학고등학교 졸업</p>
                     </div>
@@ -193,7 +195,6 @@
         </div>
     </section>
     <!-- 2페이지 끝(about me) -->
-    <!-- 수정하려는 부분 -->
     <section id="section3" class="page">
         <h3>Project</h3>
         <div id="project-web">
@@ -202,7 +203,7 @@
                 <div class="web-areawrap swiper mySwiper slides">
                     <ul class="web-wrap swiper-wrapper slide-wrapper">
                         <li class="on swiper-slide slide">
-                            <div class="web-img"><img src="./img/protfolio.png" alt="스튜디오 달고나 이미지"></div>
+                            <div class="web-img"><img src="./img/포트폴리오.png" alt="포트폴리오 이미지"></div>
                             <div class="web-text">
                                 <p class="title">포트폴리오</p>
                                 <p class="point">
@@ -211,6 +212,8 @@
                                     <span>HTML5</span>
                                     <span>SCSS</span>
                                     <span>jquery</span>
+                                    <span>swiper</span>
+                                    <span>api</span>
                                 </p>
                                 <table>
                                     <caption>포트폴리오 상세사항</caption>
@@ -221,7 +224,7 @@
                                     <tbody>
                                         <tr>
                                             <th>작업기간</th>
-                                            <td>22.05.27~22.07.31</td>
+                                            <td>22.09.07~22.11.17</td>
                                         </tr>
                                         <tr>
                                             <th>참여도</th>
@@ -253,7 +256,7 @@
                                     <tbody>
                                         <tr>
                                             <th>작업기간</th>
-                                            <td>22.05.27~22.07.31</td>
+                                            <td>22.08.22~22.08.25</td>
                                         </tr>
                                         <tr>
                                             <th>참여도</th>
@@ -262,7 +265,7 @@
                                     </tbody>
                                 </table>
                                 <p class="web-ex">모바일 디자인 작업으로 팬시 스토어인 스튜디오 달고나 사이트를 직접 디자인하였다. 밝고 따뜻한 색상을 위주로 작업하였으며 팬시 디자인 자체가 아기자기하고 복잡한 느낌이 있기에 웹디자인은 최대한 심플하게 작업하였다.</p>
-                                <a href="./07_STUDIO DALGONA/index.html" title="스튜디오달고나모바일" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
+                                <a href="./07_STUDIO_DALGONA/index.html" title="스튜디오달고나모바일" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </li>
                         <li class="swiper-slide slide">
@@ -285,7 +288,7 @@
                                     <tbody>
                                         <tr>
                                             <th>작업기간</th>
-                                            <td>22.05.27~22.07.31</td>
+                                            <td>22.07.20~22.08.02</td>
                                         </tr>
                                         <tr>
                                             <th>참여도</th>
@@ -306,7 +309,9 @@
                                     <span>HTML5</span>
                                     <span>CSS3</span>
                                     <span>jquery</span>
+                                    <span>swiper</span>
                                     <span>rss</span>
+                                    <span>api</span>
                                 </p>
                                 <table>
                                     <caption>용인시청대표포털 클론코딩 상세사항</caption>
@@ -317,7 +322,7 @@
                                     <tbody>
                                         <tr>
                                             <th>작업기간</th>
-                                            <td>22.05.27~22.07.31</td>
+                                            <td>22.06.12~22.07.31</td>
                                         </tr>
                                         <tr>
                                             <th>참여도</th>
@@ -325,7 +330,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p class="web-ex">첫 코딩 작업물로 용인시청대표포털을 클론코딩 하였다. 메인 페이지, 로그인 페이지, 회원가입 페이지를 작업하였다.</p>
+                                <p class="web-ex">첫 코딩 작업물로 용인시청대표포털을 클론코딩 하였다. 메인 페이지, 로그인 페이지, 회원가입 페이지를 작업하였다. 기본적인 것을 다 완성한 뒤 flex박스와 rss수업을 받고 해당 사항을 적용하여 7월 말에 제작을 완료하였다.</p>
                                 <a href="http://jiwoo0204.dothome.co.kr/01_project1/indexre.html" title="용인시청대표포털클론코딩" target="_blank">바로가기<i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </li>
@@ -341,55 +346,55 @@
                 </div>
             </div>
         </div>
+        <!-- 웹 프로젝트 끝 -->
         <div class="container">
-            <!-- 웹 프로젝트 끝 -->
             <div id="project-design">
                 <h4>design</h4>
                 <ul class="design-wrap">
                     <li>
-                        <a href="#"><img src="./img/연주회 sns용_강지혜.png" alt="연주회 홍보 SNS용포스터"></a>
+                        <a href="#"><img src="./img/연주회_sns용_강지혜.png" alt="연주회 홍보 SNS용포스터"></a>
                         <div class="design-ex">
                             <p class="detext">졸업연주회 홍보 포스터</p>
                             <p class="deprg">사용 프로그램</p>
                             <span class="deicon">
                                 <a href="#">
-                                    <p class="ps">Ps</p>
+                                    <span class="ps">Ps</span>
                                 </a>
                             </span>
                         </div>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/안양대학교 포스터-최종.jpg" alt="안양대학교 연주회 포스터"></a>
+                        <a href="#"><img src="./img/안양대학교_포스터-최종.jpg" alt="안양대학교 연주회 포스터"></a>
                         <div class="design-ex">
                             <p class="detext">안양대학교 연주회 포스터</p>
                             <p class="deprg">사용 프로그램</p>
                             <span class="deicon">
-                                <a href="#"><p class="ps">Ps</p></a>
+                                <a href="#"><span class="ps">Ps</span></a>
                             </span>
                         </div>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/안양대학교 팜플렛 앞면.jpg" alt="안양대학교 팜플렛"></a>
+                        <a href="#"><img src="./img/안양대학교_팜플렛_앞면.jpg" alt="안양대학교 팜플렛"></a>
                         <div class="design-ex">
                             <p class="detext">안양대학교 연주회 리플렛</p>
                             <p class="deprg">사용 프로그램</p>
                             <span class="deicon">
                                 <a href="#">
-                                    <p class="ps">Ps</p>
-                                    <p class="id">Id</p>
+                                    <span class="ps">Ps</span>
+                                    <span class="id">Id</span>
                                 </a>
                             </span>
                         </div>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/21.05.28완_대지 1.png" alt="크루엘라 티켓디자인"></a>
+                        <a href="#"><img src="./img/크루엘라티켓.png" alt="크루엘라 티켓디자인"></a>
                         <div class="design-ex">
                             <p class="detext">크루엘라 티켓 디자인</p>
                             <p class="deprg">사용 프로그램</p>
                             <span class="deicon">
                                 <a href="#">
-                                    <p class="ps">Ps</p>
-                                    <p class="ai">Ai</p>
+                                    <span class="ps">Ps</span>
+                                    <span class="ai">Ai</span>
                                 </a>
                             </span>
                         </div>
@@ -397,23 +402,22 @@
                 </ul>
                 <div class="bigdeproject">
                     <div class="bigdeproject-wrap">
-                        <img src="./img/졸업연주회 포스터.jpg" alt="졸업연주회 포스터">
+                        <img src="./img/졸업연주회_포스터.jpg" alt="졸업연주회 포스터">
                     </div>
                     <div class="bigdeproject-wrap">
-                        <img src="./img/안양대학교 연주회 포스터.jpg" alt="안양대학교 연주회 포스터">
+                        <img src="./img/안양대학교_연주회_포스터.jpg" alt="안양대학교 연주회 포스터">
                     </div>
                     <div class="bigdeproject-wrap">
-                        <img src="./img/안양대학교 팜플렛 뒷면.jpg" alt="안양대학교 팜플렛">
+                        <img src="./img/안양대학교_팜플렛_뒷면.jpg" alt="안양대학교 팜플렛">
                     </div>
                     <div class="bigdeproject-wrap">
-                        <img src="./img/제목 없음-1.jpg" alt="크루엘라 티켓디자인">
+                        <img src="./img/크루엘라티켓_이미지.jpg" alt="크루엘라 티켓디자인">
                     </div>
-                    <p>*검은바탕을 누르셔도 해당 창을 닫을 수 있습니다.</p>
-                    <button class="btn"><i class="fas fa-times"></i></button>
                 </div>
             </div>
             <!-- 디자인 프로젝트 끝 -->
         </div>
+        <!-- 디자인 프로젝트 끝 -->
     </section>
     <!-- 3페이지 끝(project) -->
     <footer id="footer" class="page">
@@ -465,7 +469,19 @@
                         </dl>
                     </div>
                     <a href="./강지우_사람인이력서_수정.pdf" target="_blank" title="이력서&자기소개서">이력서&자기소개서 보기<i class="fas fa-external-link-alt"></i></a>
-                    <a href="./강지우_사람인이력서_수정.pdf" target="_blank" title="깃허브 바로가기">깃허브 바로가기<i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/2kjiw" target="_blank" title="깃허브 바로가기">깃허브 바로가기<i class="fas fa-external-link-alt"></i></a>
+                    <div class="standard">
+                        <p>
+                            <a href="http://validator.kldp.org/check?uri=referer" onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))">
+                                <img src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80">
+                            </a>
+                        </p>
+                        <p>
+                            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!" />
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

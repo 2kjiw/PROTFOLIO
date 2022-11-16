@@ -1,11 +1,13 @@
 $(function(){
     //scroll event
-    let scrTop=$(window).scrollTop();
     let headerNav=$('#header');
     let section1He=$('#section1');
-    let scrollPage=$('.page');
     let section1Height = section1He.height();
-    let menu=$('.nav>.flex>ul>li');
+    let $menu=$('.nav>.flex>ul>li');
+    let sec2=$('#section2').position().top;
+    let sec3=$('#section3').position().top;
+    let sec4=$('#footer').position().top;
+    let pageidx=$('.page').eq();
     // console.log(section1Height);
     
     $(window).scroll(function(){
@@ -14,30 +16,33 @@ $(function(){
     });
 
     function navTop(){
-        if($(this).scrollTop() >= section1Height/2){
+        var scrTop=$(window).scrollTop();
+
+        if(scrTop >= section1Height/2){
             headerNav.addClass('on');
             $('#topBtn').fadeIn();
         }else{
             headerNav.removeClass('on');
             $('#topBtn').fadeOut();
-            menu.removeClass('on');
+            $menu.removeClass('on');
         }
     }
 
     function menuOn(){
-        menu.each(function(idx){
-            let i=scrollPage.index();
-            let menuId=$(this).find('a').attr('href');
-            let menuPos=$(menuId).offset().bottom;
+        var scrTop=$(window).scrollTop();
 
-            if(menuPos <= scrTop){
-                menu.removeClass('on');
-                menu.eq(i).addClass('on');
+        $menu.each(function(){
+            var secId=$(this).children('a').attr('href');
+            var secPos=$(secId).offset().top;
+
+            if(secPos <= scrTop){
+                $menu.removeClass('on');
+                $(this).addClass('on');
             }else if(scrTop == $(document).height() - $(window).height()){
-                menu.removeClass('on');
-                menu.last().addClass('on');
+                $menu.removeClass('on');
+                $menu.last().addClass('on');
             }
-        })
+        });
     }
 
     //header api
@@ -48,7 +53,7 @@ $(function(){
     });
 
     //header nav 스크롤이동
-    menu.find('a').click(function(e){
+    $menu.find('a').click(function(e){
         // console.log(num);
 
         e.preventDefault();
@@ -58,20 +63,20 @@ $(function(){
     });
 
     //header nav event
-    menu.on('mouseover focus',function(){
+    $menu.on('mouseover focus',function(){
         $(this).find('ul').stop().slideDown();
     });
-    menu.on('mouseout blur',function(){
+    $menu.on('mouseout blur',function(){
         $(this).find('ul').stop().slideUp();
     });
-    menu.on('click focus',function(){
+    $menu.on('click focus',function(){
         // console.log('click')
-        menu.removeClass('on');
+        $menu.removeClass('on');
         $(this).addClass('on');
     });
-    menu.on('blur',function(){
+    $menu.on('blur',function(){
         $(this).removeClass('on');
-        menu.removeClass('on');
+        $menu.removeClass('on');
     });
 
 });
