@@ -66,6 +66,28 @@ body::-webkit-scrollbar-button:start:decrement {
 body::-webkit-scrollbar-corner {
   background-color: red;
 }
+body #quick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+}
+body #quick li {
+  background-color: #343434;
+}
+body #quick li a {
+  font-size: 0;
+  display: block;
+  text-align: center;
+}
+body #quick li a:focus {
+  font-size: 16px;
+  padding: 10px 0;
+  color: #fefefe;
+}
 body #header {
   position: fixed;
   top: calc(100vh - 150px);
