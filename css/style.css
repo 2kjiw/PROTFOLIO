@@ -1126,16 +1126,6 @@ body #footer .container .contact-wrap .contact-me > a:hover {
 body #footer .container .contact-wrap .contact-me > a i {
   margin-left: 7px;
 }
-body #footer .container .contact-wrap .contact-me > .standard {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-@media (max-width: 510px) {
-  body #footer .container .contact-wrap .contact-me > .standard {
-    bottom: -80px;
-  }
-}
 @media (max-width: 1150px) {
   body #footer .container .contact-wrap .contact-me {
     padding: 0;
