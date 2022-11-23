@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+#wrap{width: 100%; height: 100%; background-color: #fefefe; color: #333;}
+.container{width: 80%; margin: 0 auto;}
+#header{width: 100%; height: 500px;}
+#section{width: 100%; margin-top: 80px;}
+
+#header{
+    background: no-repeat center center;
+    background-size: cover; position: relative;
+}
+#header.dalgona{
+    background-image: url(../img/스튜디오달고나.png);
+}
+#header.portfolio{
+    background-image: url(../img/포트폴리오.png);
+}
+#header.shilla{
+    background-image: url(../img/신라호텔.png);
+}
+#header.yongin{
+    background-image: url(../img/용인시대표포털클론.png);
+}
+#header .container a{
+    display: inline-block; padding: 7px 50px; background: #fefefe;
+    border: 2px solid #4384F7; border-radius: 50px; font-size: 18px;
+    font-weight: 400; position: absolute; bottom: 15%;
+    transition: .3s; color: #333;
+}
+#header .container a:hover{
+    background: #4384F7; color: #fefefe;
+}
+#header .container a i{
+    margin-left: 7px;
+}
+
+
+#section .container article{
+    text-align: center;
+}
+
+#section .container article img{
+    box-shadow: 0 0 5px #ccc;
+    width: 100%;
+}
+
+#section .container h1{
+    font-size: 1.5em; font-weight: 600; color: #4384F7;
+    margin-bottom: 30px;
+}
+
+#section .container .style-guide{
+    margin-bottom: 150px;
+}
+
+#section .container .design-img{
+    display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+    -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; -webkit-justify-content: space-evenly; justify-content: space-evenly;
+    -webkit-box-align: baseline; -ms-flex-align: baseline; -webkit-align-items: baseline; align-items: baseline;
+}
+#section .container .design-img .main{
+    margin-right: 20px;
+}
+#section .container .design-img .sub .sub-img{
+    display: grid; display: -ms-grid; display: -moz-grid;
+    grid-template-columns: repeat(2, minmax(auto, 390px)); -ms-grid-columns: repeat(2, minmax(auto, 390px));
+    grid-gap: 15px;
+}
+#section .container .design-img .sub .sub-img.yongin-web{
+    grid-template-columns: repeat(1, minmax(auto, 500px)); -ms-grid-columns: repeat(1, minmax(auto, 500px));
+}

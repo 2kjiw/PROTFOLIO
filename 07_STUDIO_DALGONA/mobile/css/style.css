@@ -166,6 +166,7 @@ body::-webkit-scrollbar-track {
   justify-content: space-between;
   vertical-align: middle;
   align-items: center;
+  align-content: center;
 }
 #wrap #header .header-top .container span {
   display: block;
@@ -241,6 +242,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   vertical-align: middle;
   align-items: center;
+  align-content: center;
   overflow: hidden;
 }
 #wrap #header .header-bottom .container .nav li {
@@ -328,6 +330,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
 }
 #wrap #section2 .container .best-line .title-bars {
   width: 30px;
@@ -397,6 +400,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
 }
 #wrap #section3 .container .new-line .title-bars {
   width: 30px;
@@ -466,6 +470,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
 }
 #wrap #section4 .container .writer-line .title-bars {
   width: 30px;
@@ -572,6 +577,7 @@ body::-webkit-scrollbar-track {
   justify-content: space-between;
   vertical-align: middle;
   align-items: center;
+  align-content: center;
   padding: 0 13px;
 }
 #wrap #quick-layer .container .quick-box li a {

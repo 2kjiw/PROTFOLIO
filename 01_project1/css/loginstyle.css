@@ -19,7 +19,6 @@ body{color: #353535; font-family: 'Nanum Gothic', sans-serif;}
 
 #menu{width: 230px;}
 #menu h1{color: #fff; font-size: 28px; background: #4b769a;height: 110px; line-height: 110px; text-align: center;}
-#menu ul{}
 #menu ul li{margin-top: -1px; font-weight: 600; line-height: 32px; border-bottom: 1px solid #ddd;}
 #menu ul li a{width: 100%; font-size: 16px; color: #333; display: inline-block; background: url(../img/lnb_off.gif) no-repeat 188px center; padding: 10px 47px 10px 23px;}
 
@@ -60,8 +59,6 @@ body{color: #353535; font-family: 'Nanum Gothic', sans-serif;}
 .box1 dl{margin-bottom: 20px;}
 .box1 dl dt{font-family: "NanumGothic"; font-size: 14px; box-sizing: border-box; background: url(../img/bg_indent2.gif) no-repeat scroll 3px 10px; padding: 0 0 0 11px;}
 .box1 dl dd{font-family: "NanumGothic"; font-size: 14px; padding: 0 0 0 20px; display: inline-block; background: url(../img/bg_indent3.gif) no-repeat scroll 11px 7px;}
-.box1 dl dd.point>span{}
 .box1 dl .bold{font-weight: 600;}
 .box1 dl .bold span.point{font-weight: 600; color: #105f97;}
-.box1 dl .point{}
 .box1 dl .point span{font-weight: 600; color: #105f97;}

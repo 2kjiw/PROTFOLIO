@@ -704,6 +704,11 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-img img {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 530px) {
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-img {
+    margin-top: 30px;
+  }
+}
 body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text {
   margin-left: 30px;
   height: 70%;
@@ -750,9 +755,16 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text table
 body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text table colgroup .w7 {
   width: 60%;
 }
-@media (max-width: 420px) {
+@media (max-width: 1320px) {
   body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text table {
     font-size: 14px;
+  }
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text table tr {
+    display: block;
+  }
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text table tr th, body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text table td {
+    display: block;
+    margin-top: 5px;
   }
 }
 body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-ex {
@@ -761,13 +773,19 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-
   margin-top: 20px;
   line-height: 150%;
 }
-@media (max-width: 420px) {
+@media (max-width: 1035px) {
   body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-ex {
     font-size: 14px;
+    margin-top: 0;
   }
 }
-body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a {
-  display: block;
+body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn {
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+}
+body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a {
+  display: inline-block;
   font-size: 18px;
   white-space: nowrap;
   font-weight: 600;
@@ -777,34 +795,40 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a {
   border-radius: 10px;
   transition: 0.3s;
   color: #4384F7;
-  position: absolute;
-  bottom: 6%;
-  right: 5%;
 }
-body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a i {
+body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a.style-gurid {
+  margin-right: 5px;
+}
+body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a i {
   margin-left: 7px;
 }
-body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a:hover {
+body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a:hover {
   background: #4384F7;
   color: #fefefe;
 }
 @media (max-width: 1000px) {
-  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a {
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn {
     bottom: 2%;
     right: 3%;
   }
 }
 @media (max-width: 750px) {
-  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a {
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn {
     bottom: 90%;
     right: 3%;
   }
 }
+@media (max-width: 530px) {
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a {
+    padding: 10px 15px;
+  }
+}
 @media (max-width: 420px) {
-  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text a {
-    font-size: 13px;
-    padding: 5px 10px;
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn {
     bottom: 91%;
+  }
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a {
+    font-size: 13px;
   }
 }
 @media (max-width: 1000px) {
