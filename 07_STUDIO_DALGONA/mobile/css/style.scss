@@ -20,61 +20,100 @@ $fs20: 20px;
 $fs16: 16px;
 $fs12: 12px;
 
-@mixin flex($dir, $align, $justify) {
+@mixin flex($dir, $align, $justify, $wrap) {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    @if($dir == dirrow){
+    @if($dir == row){
+        -webkit-box-orient: horizontal;
         -moz-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
     }
-    @if($dir == dircolumn){
+    @if($dir == column){
+        -webkit-box-orient: vertical;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    @if($align == alignstart){
+    @if($align == start){
+        -webkit-box-align: start;
         -moz-align-items: flex-start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
-    @if($align == aligncenter){
+    @if($align == center){
+        -webkit-box-align: center;
         -moz-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
     }
-    @if($align == alignend){
+    @if($align == end){
+        -webkit-box-align: end;
         -moz-align-items: flex-end;
+        -ms-flex-align: end;
         align-items: flex-end;
     }     
-    @if($align == alignstretch) {
+    @if($align == stretch) {
+        -webkit-box-align: stretch;
         -moz-align-items: stretch;
+        -ms-flex-align: stretch;
         align-items: stretch;
+    }     
+    @if($align == baseline) {
+        -webkit-box-align: baseline;
+        -moz-align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
     }
-    @if($justify == justifybetween){
+    @if($justify == between){
+        -webkit-box-pack: justify;
         -moz-justify-content: space-between;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
-    @if($justify == justifyaround){
+    @if($justify == around){
+        -webkit-box-pack:justify;
         -moz-justify-content: space-around;
+        -ms-flex-pack: justify;
         justify-content: space-around;
     }
-    @if($justify == justifycenter){
-        -moz-justify-content: center;
+    @if($justify == center){
+        -webkit-box-pack: center;
+        -moz-box-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
-    @if($justify == justifystart){
-        -moz-justify-content: flex-start;
+    @if($justify == start){
+        -webkit-box-pack: start;
+        -moz-box-justify-content: flex-start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
-    @if($justify == justifyend){
-        -moz-justify-content: flex-end;
+    @if($justify == end){
+        -webkit-box-pack: end;
+        -moz-box-justify-content: flex-end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
     }
+    @if($wrap == nowrap){
+        -webkit-box-lines: single;
+        -moz-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+    @if($wrap == wrap){
+        -webkit-box-lines: multiple;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+@mixin grid {
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
 }
 
 body{
@@ -101,7 +140,7 @@ body{
     z-index: 999;
     .shopbars{
         width: 100%;
-        @include flex;
+        @include flex(null, null, null, nowrap);
         .shopbar{flex-basis: 12.5%; height: 73px; border-radius: 0 0 50% 50%;}
         .shop-bar1{background-color: $color1;}
         .shop-bar2{background-color: $color2;}
@@ -119,7 +158,7 @@ body{
     #header{
         #menu{
             display: none;
-            position: absolute;
+            position: fixed;
             top: 55px;
             z-index: 997;
             background: $white;
@@ -157,7 +196,7 @@ body{
                         display: none;
                         ul{
                             background: $grey-light;
-                            display: grid;
+                            @include grid();
                             grid-template-columns: repeat(auto-fit, minmax(70px ,1fr));
                             padding-left: 45px;
                             padding-right: 35px;
@@ -233,7 +272,7 @@ body{
             z-index: 998;
             .container{
                 height: 54px;
-                @include flex(aligncenter, justifybetween);
+                @include flex(null, center, between, nowrap);
                 vertical-align: middle;
                 span{
                     display: block;
@@ -309,7 +348,7 @@ body{
                 .nav{
                     width: 100%;
                     height: 50px;
-                    @include flex(aligncenter);
+                    @include flex(null, center, null, nowrap);
                     vertical-align: middle;
                     overflow: hidden;
                     li{
@@ -378,7 +417,7 @@ body{
             width: 100%;
             position: relative;
             top: -15px;
-            @include flex(justifycenter);
+            @include flex(null, null, center, nowrap);
             li{
                 width: 7px;
                 height: 7px;
@@ -396,10 +435,10 @@ body{
         .container{
             .best-line{
                 height: 25px;
-                @include flex(aligncenter, justifyaround);
+                @include flex(null, center, around, nowrap);
                 .title-bars{
                     width: 30px;
-                    @include flex(justifybetween);
+                    @include flex(null, null, between, nowrap);
                     .title-bar{
                         width: 5px;
                         height: 5px;
@@ -414,8 +453,7 @@ body{
                 }
             }
             .best-boxs{
-                @include flex(justifybetween);
-                flex-wrap: wrap;
+                @include flex(null, null, between, wrap);
                 .best-box{
                     margin-top: 33px;
                     width: 165px;
@@ -427,7 +465,7 @@ body{
                         }
                     }
                     .product-box{
-                        @include flex(justifyaround);
+                        @include flex(null, null, around, nowrap);
                         margin-top: 10px;
                         span{
                             h4{
@@ -465,11 +503,10 @@ body{
         .container{
             .new-line{
                 height: 25px;
-                @include flex(aligncenter, justifyaround);
+                @include flex(null, center, around, nowrap);
                 .title-bars{
                     width: 30px;
-                    @include flex(justifybetween);
-                    -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                    @include flex(null, null, between, nowrap);
                     .title-bar{
                         width: 5px;
                         height: 5px;
@@ -484,9 +521,7 @@ body{
                 }
             }
             .new-boxs{
-                display: block;
-                flex-wrap: wrap;
-                -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                @include flex(null, null, between, wrap);
                 .new-box{
                     margin-top: 33px;
                     width: 32%;
@@ -498,8 +533,7 @@ body{
                         }
                     }
                     .product-box{
-                        display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                        -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                        @include flex(null, null, between, nowrap);
                         margin-top: 10px;
                         span{
                             h4{
@@ -537,13 +571,10 @@ body{
         .container{
             .writer-line{
                 height: 25px;
-                display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                -webkit-box-pack: space-around; -ms-flex-pack: space-around; -webkit-justify-content: space-around; justify-content: space-around;
-                -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; align-content: center;
+                @include flex(null, center, around, nowrap);
                 .title-bars{
                     width: 30px;
-                    display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                    -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                    @include flex(null, null, between, nowrap);
                     .title-bar{
                         width: 5px;
                         height: 5px;
@@ -558,9 +589,7 @@ body{
                 }
             }
             .writer-boxs{
-                display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                flex-wrap: wrap;
-                -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                @include flex(null, null, between, wrap);
                 .writer-box{
                     margin-top: 33px;
                     width: 32%;
@@ -572,8 +601,7 @@ body{
                         }
                     }
                     .product-box{
-                        display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                        -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                        @include flex(null, null, between, nowrap);
                         margin-top: 10px;
                         span{
                             h4{
@@ -599,16 +627,14 @@ body{
         padding: 20px 0 100px 0;
         .container{
             .footer-top{
-                display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                @include flex(null, null, between, nowrap);
                 h5{
                     width: 85px;
                     img{width: 100%;}
                 }
                 ul{
                     width: 245px;
-                    display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                    -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                    @include flex(null, null, between, nowrap);
                     li{
                         a{
                             font-size: $fs12;
@@ -660,10 +686,8 @@ body{
         .container{
             .quick-box{
                 height: 80px;
-                display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                @include flex(null, center, between, nowrap);
                 vertical-align: middle;
-                -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; align-content: center;
                 padding: 0 13px;
                 li{
                     a{

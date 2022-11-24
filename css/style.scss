@@ -12,6 +12,133 @@ $grey: #989898;
 $black:#343434;
 $white:#fefefe;
 
+/* 변수 */
+@mixin flex($dir, $align, $justify, $wrap) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    @if($dir == row){
+        -webkit-box-orient: horizontal;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    @if($dir == column){
+        -webkit-box-orient: vertical;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    @if($align == start){
+        -webkit-box-align: start;
+        -moz-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    @if($align == center){
+        -webkit-box-align: center;
+        -moz-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    @if($align == end){
+        -webkit-box-align: end;
+        -moz-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }     
+    @if($align == stretch) {
+        -webkit-box-align: stretch;
+        -moz-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }     
+    @if($align == baseline) {
+        -webkit-box-align: baseline;
+        -moz-align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    }
+    @if($justify == between){
+        -webkit-box-pack: justify;
+        -moz-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    @if($justify == around){
+        -webkit-box-pack:justify;
+        -moz-justify-content: space-around;
+        -ms-flex-pack: justify;
+        justify-content: space-around;
+    }
+    @if($justify == center){
+        -webkit-box-pack: center;
+        -moz-box-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    @if($justify == start){
+        -webkit-box-pack: start;
+        -moz-box-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    @if($justify == end){
+        -webkit-box-pack: end;
+        -moz-box-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    @if($wrap == nowrap){
+        -webkit-box-lines: single;
+        -moz-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+    @if($wrap == wrap){
+        -webkit-box-lines: multiple;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+@mixin grid($gjustify) {
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+    @if($gjustify == between){
+        -webkit-box-pack: justify;
+        -moz-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    @if($gjustify == around){
+        -webkit-box-pack:justify;
+        -moz-justify-content: space-around;
+        -ms-flex-pack: justify;
+        justify-content: space-around;
+    }
+    @if($gjustify == center){
+        -webkit-box-pack: center;
+        -moz-box-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    @if($gjustify == start){
+        -webkit-box-pack: start;
+        -moz-box-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    @if($gjustify == end){
+        -webkit-box-pack: end;
+        -moz-box-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
 *{box-sizing: border-box;}
 .container{width: 75%; height: 100%; margin: 0 auto;}
 a{color: $black;}
@@ -65,14 +192,10 @@ body{
         .container{
             .nav{
                 width: 100%; height: 70px;
-                display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
-                -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;
+                @include flex(null, center, between, nowrap);
                 .flex{
                     width: 100%;
-                    display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                    -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
-                    -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;
+                    @include flex(null, center, between, nowrap);
                     h2{
                         width: 56px; margin-right: 30px;
                         @media (max-width: 640px) {
@@ -83,7 +206,7 @@ body{
                         }
                     }
                     >ul{
-                        display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+                        @include flex(null, null, null, nowrap);
                         >li{
                             position: relative;
                             >a{
@@ -183,8 +306,7 @@ body{
                 .nav{
                     .flex{
                         width: 100%;
-                        display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                        -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
+                        @include flex(null, null, between, nowrap);
                     }
                     .weather{
                         display: none;
@@ -306,18 +428,14 @@ body{
             .container{
                 position: relative;
                 .aboutme-wrap{
-                    display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                    -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; -webkit-justify-content: space-evenly; justify-content: space-evenly;
+                    @include flex(null, null, around, nowrap);
                     white-space: nowrap; line-height: 180%;
                     >div{
                         display: inline-block;
                         &.profile{
                             margin-top: -60px; box-shadow: 0 0 3px rgba($color: $main, $alpha: .45);
                             padding: 30px 50px; background: $white;
-                            display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                            flex-direction: column;
-                            -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center;
-                            -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;
+                            @include flex(column, center, center, nowrap);
                             transform: rotate(-5deg);
                             .jiw{
                                 width: 135px; height: 170px; background: #DBF2FF;
@@ -350,6 +468,7 @@ body{
                 height: auto; text-align: center; font-size: 12px;
                 .container{
                     .aboutme-wrap{
+                        @include flex(column, null, null, wrap);
                         flex-direction: column; white-space: inherit;
                         .profile{
                             width: 270px; height: 350px; margin: -60px auto 0 auto;
@@ -366,9 +485,10 @@ body{
         }
         .container{
             .skill-wrap{
-                width: 100%; display: grid; display: -ms-grid; display: -moz-grid;
+                width: 100%;
+                @include grid(null);
                 grid-gap: 15px;
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); -ms-grid-columns: repeat(auto-fit, minmax(400px, 1fr));
                 >div{
                     position: relative; padding: 40px;
                     border: 1px solid $grey; border-radius: 30px;
@@ -439,9 +559,7 @@ body{
                             &:last-child{margin-bottom: 0;}
                             a{
                                 font-size: 14px; line-height: 24px; font-weight: 600;
-                                display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                                -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; justify-content: space-between;
-                                -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;
+                                @include flex(null, center, between, nowrap);
                                 width: 100%;
                                 i{
                                     color: $grey;
@@ -469,7 +587,7 @@ body{
                     >div{padding: 20px 15px; border-radius: 20px;}
                 }
                 @media (max-width: 500px) {
-                    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); -ms-grid-columns: repeat(auto-fit, minmax(230px, 1fr));
                 }
                 @media (max-width: 475px){
                     >div ul li a{font-size: 12px;}
@@ -489,13 +607,12 @@ body{
                 .web-areawrap{
                     width: 100%; height: 650px; overflow: hidden;
                     .web-wrap{
-                        -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;
+                        @include flex(null, center, null, nowrap);
                         li{
                             width: 65%; height: 90%; margin: 0 30px;
                             border-radius: 20px; padding: 0 20px;
                             box-shadow: 0 0 5px $main;
-                            display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                            -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;
+                            @include flex(null, center, null, nowrap);
                             &.on{
                                 height: 98%;
                             }
@@ -568,11 +685,14 @@ body{
                                         bottom: 90%; right: 3%;
                                     }
                                     @media (max-width: 530px) {
-                                        a{padding: 10px 15px;}
+                                        a{padding: 10px 15px; font-size: 13px;}
                                     }
                                     @media (max-width: 420px){
                                         bottom: 91%;
-                                        a{font-size: 13px;}
+                                    }
+                                    @media (max-width: 370px){
+                                        font-size: 11px;
+                                        a{padding: 7px;}
                                     }
                                 }
                                 
@@ -617,9 +737,8 @@ body{
         .container{
             #project-design{
                 .design-wrap{
-                    display: grid; display: -ms-grid; display: -moz-grid;
+                    @include grid(center);
                     grid-gap: 15px;
-                    -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center;
                     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); -ms-grid-columns: repeat(auto-fit, minmax(180px, 1fr));
                     grid-auto-rows: minmax(195px, 350px);
                     li{
@@ -713,8 +832,7 @@ body{
         }
         .container{
             .contact-wrap{
-                display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-                -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center;
+                @include flex(null, null, center, nowrap);
                 .contact-form{
                     padding: 50px; background: rgba($color: $white, $alpha: .6);
                     border-radius: 30px; box-shadow: 0 0 5px #dfdfdf;

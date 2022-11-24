@@ -6,13 +6,11 @@
         padding: 0 10px;
         border-bottom: 1px solid $grey;
         .container{
-            display: flex;
-            justify-content: space-between;
+            @include flex(null, center, between, nowrap);
             vertical-align: middle;
-            align-items: center;
             height: 100px;
             .hleft-1{
-                display: flex;
+                @include flex(null, null, null, nowrap);
                 .hleft{
                     width: 50px;
                     height: 50px;
@@ -55,14 +53,11 @@
         border: 1px solid $grey;
         .container{
             .sectionMyTop{
-                display: flex;
-                justify-content: space-between;
+                @include flex(null, center, between, nowrap);
                 vertical-align: middle;
-                align-items: center;
                 height: 21px;
                 .orderStatus-box{
-                    display: flex;
-                    align-items: center;
+                    @include flex(null, center, null, nowrap);
                     vertical-align: middle;
                     .orderStatus{
                         font-size: 14px;
@@ -93,8 +88,7 @@
                 margin-top: 25px;
                 ul{
                     text-align: center;
-                    display: flex;
-                    justify-content: space-around;
+                    @include flex(null, null, around, nowrap);
                     li{
                         position: relative;
                         p{
@@ -138,8 +132,7 @@
             padding: 14px 20px;
             box-sizing: border-box;
             dl{
-                display: flex;
-                justify-content: space-between;
+                @include flex(null, null, between, nowrap);
                 font-size: $fs12;
                 color: $grey-dark;
                 margin-bottom: 15px;
@@ -155,7 +148,7 @@
                         margin-right: 0;
                     }
                     &.lookup{
-                        display: flex;
+                        @include flex(null, null, null, nowrap);
                         color: $color1;
                         a{
                             color: $color1;
@@ -177,17 +170,13 @@
         .container{
             .user-help{
                 ul{
-                    // display: flex;
-                    justify-content: space-around;
+                    @include flex(null, center, around, wrap);
                     vertical-align: middle;
-                    align-items: center;
                     width: 100%;
                     text-align: center;
                     li{
                         display: inline-block;
-                        // padding-top: 50px;
                         width: 87px;
-                        // height: 80px;
                         box-sizing: border-box;
                         background-image: url(../img/sfix_icon_shopMain.png);
                         background-repeat: no-repeat;

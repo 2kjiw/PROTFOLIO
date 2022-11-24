@@ -30,6 +30,8 @@ body::-webkit-scrollbar-track {
 #loding .shopbars {
   width: 100%;
   display: flex;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #loding .shopbars .shopbar {
   flex-basis: 12.5%;
@@ -60,7 +62,7 @@ body::-webkit-scrollbar-track {
 }
 #wrap #header #menu {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 55px;
   z-index: 997;
   background: #fefefe;
@@ -99,6 +101,8 @@ body::-webkit-scrollbar-track {
 #wrap #header #menu .menu-lists li.menu-list > div ul {
   background: #f0f0f0;
   display: grid;
+  display: -ms-grid;
+  display: -moz-grid;
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   padding-left: 45px;
   padding-right: 35px;
@@ -163,10 +167,13 @@ body::-webkit-scrollbar-track {
 #wrap #header .header-top .container {
   height: 54px;
   display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
+  -moz-align-items: center;
   align-items: center;
-  align-content: center;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
+  vertical-align: middle;
 }
 #wrap #header .header-top .container span {
   display: block;
@@ -240,9 +247,11 @@ body::-webkit-scrollbar-track {
   width: 100%;
   height: 50px;
   display: flex;
-  vertical-align: middle;
+  -moz-align-items: center;
   align-items: center;
-  align-content: center;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
+  vertical-align: middle;
   overflow: hidden;
 }
 #wrap #header .header-bottom .container .nav li {
@@ -309,7 +318,11 @@ body::-webkit-scrollbar-track {
   position: relative;
   top: -15px;
   display: flex;
+  -webkit-box-pack: center;
+  -moz-box-justify-content: center;
   justify-content: center;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #section1 .slide-btn li {
   width: 7px;
@@ -328,14 +341,20 @@ body::-webkit-scrollbar-track {
 #wrap #section2 .container .best-line {
   height: 25px;
   display: flex;
-  justify-content: space-around;
+  -moz-align-items: center;
   align-items: center;
-  align-content: center;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #section2 .container .best-line .title-bars {
   width: 30px;
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #section2 .container .best-line .title-bars .title-bar {
   width: 5px;
@@ -350,8 +369,10 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section2 .container .best-boxs {
   display: flex;
-  flex-wrap: wrap;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: multiple;
+  flex-wrap: wrap;
 }
 #wrap #section2 .container .best-boxs .best-box {
   margin-top: 33px;
@@ -366,7 +387,10 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section2 .container .best-boxs .best-box .product-box {
   display: flex;
-  justify-content: space-between;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
   margin-top: 10px;
 }
 #wrap #section2 .container .best-boxs .best-box .product-box span h4 {
@@ -398,14 +422,20 @@ body::-webkit-scrollbar-track {
 #wrap #section3 .container .new-line {
   height: 25px;
   display: flex;
-  justify-content: space-around;
+  -moz-align-items: center;
   align-items: center;
-  align-content: center;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #section3 .container .new-line .title-bars {
   width: 30px;
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #section3 .container .new-line .title-bars .title-bar {
   width: 5px;
@@ -420,8 +450,10 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section3 .container .new-boxs {
   display: flex;
-  flex-wrap: wrap;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: multiple;
+  flex-wrap: wrap;
 }
 #wrap #section3 .container .new-boxs .new-box {
   margin-top: 33px;
@@ -436,7 +468,10 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section3 .container .new-boxs .new-box .product-box {
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
   margin-top: 10px;
 }
 #wrap #section3 .container .new-boxs .new-box .product-box span h4 {
@@ -468,14 +503,20 @@ body::-webkit-scrollbar-track {
 #wrap #section4 .container .writer-line {
   height: 25px;
   display: flex;
-  justify-content: space-around;
+  -moz-align-items: center;
   align-items: center;
-  align-content: center;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #section4 .container .writer-line .title-bars {
   width: 30px;
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #section4 .container .writer-line .title-bars .title-bar {
   width: 5px;
@@ -490,8 +531,10 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section4 .container .writer-boxs {
   display: flex;
-  flex-wrap: wrap;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: multiple;
+  flex-wrap: wrap;
 }
 #wrap #section4 .container .writer-boxs .writer-box {
   margin-top: 33px;
@@ -506,7 +549,10 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section4 .container .writer-boxs .writer-box .product-box {
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
   margin-top: 10px;
 }
 #wrap #section4 .container .writer-boxs .writer-box .product-box span h4 {
@@ -526,7 +572,10 @@ body::-webkit-scrollbar-track {
 }
 #wrap #footer .container .footer-top {
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #footer .container .footer-top h5 {
   width: 85px;
@@ -537,7 +586,10 @@ body::-webkit-scrollbar-track {
 #wrap #footer .container .footer-top ul {
   width: 245px;
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 #wrap #footer .container .footer-top ul li a {
   font-size: 12px;
@@ -574,10 +626,13 @@ body::-webkit-scrollbar-track {
 #wrap #quick-layer .container .quick-box {
   height: 80px;
   display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
+  -moz-align-items: center;
   align-items: center;
-  align-content: center;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
+  vertical-align: middle;
   padding: 0 13px;
 }
 #wrap #quick-layer .container .quick-box li a {

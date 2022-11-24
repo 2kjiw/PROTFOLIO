@@ -55,7 +55,7 @@
 
 #section .container .design-img{
     display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
-    -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; -webkit-justify-content: space-evenly; justify-content: space-evenly;
+    -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: space-evenly; justify-content: space-evenly;
     -webkit-box-align: baseline; -ms-flex-align: baseline; -webkit-align-items: baseline; align-items: baseline;
 }
 #section .container .design-img .main{

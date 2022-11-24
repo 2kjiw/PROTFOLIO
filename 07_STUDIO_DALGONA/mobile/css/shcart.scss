@@ -6,10 +6,9 @@
         width: 100%;
         border-bottom: 1px solid $grey;
         .container{
-            display: flex;
+            @include flex(null, center, null, nowrap);
             height: 70px;
             vertical-align: middle;
-            align-items: center;
             a{font-size: 26px; color: $grey; margin-right: 15px;}
             p{font-size: $fs16; color: $color1; font-weight: 500;}
         }
@@ -25,10 +24,9 @@
                     padding: 35px 20px;
                     box-sizing: border-box;
                     .cart-top{
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex(null, null, between, nowrap);
                         .cart-top-left{
-                            display: flex;
+                            @include flex(null, null, null, nowrap);
                             .sh-img{
                                 width: 70px;
                                 height: 70px;
@@ -49,8 +47,7 @@
                         }
                     }
                     .cart-bottom{
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex(null, null, between, nowrap);
                         margin-top: 20px;
                         .more-box{
                             width: 100px;
@@ -59,9 +56,7 @@
                             background: $grey-light;
                             border: 2px solid $color1;
                             border-radius: 3px;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
+                            @include flex(null, center, between, nowrap);
                             vertical-align: middle;
                             .plmi-box{
                                 width: 30px;
@@ -72,9 +67,7 @@
                                 a{
                                     color: $color1;
                                     height: 100%;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
+                                    @include flex(null, center, center, nowrap);
                                 }
                             }
                             p{
@@ -105,8 +98,7 @@
                 box-sizing: border-box;
                 span{
                     font-size: $fs16;
-                    display: flex;
-                    justify-content: space-between;
+                    @include flex(null, null, between, nowrap);
                     margin-bottom: 5px;
                     p.totalamount{
                         color: $grey-dark;

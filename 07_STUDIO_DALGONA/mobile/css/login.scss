@@ -21,7 +21,6 @@
                 a{
                     font-size: 40px;
                     color: $grey;
-                    i{}
                 }
             }
         }
@@ -61,14 +60,9 @@
                     margin-top: 15px;
                     .login-find-box{
                         width: 225px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
+                        @include flex(null, center, between, nowrap);
                         vertical-align: middle;
                         margin: 0 auto;
-                        li{
-                            a{}
-                        }
                     }
                 }
             }
@@ -106,15 +100,8 @@
             }
             .sns-login-box{
                 .sns-login{
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
+                    @include flex(null, center, around, nowrap);
                     vertical-align: middle;
-                    li{
-                        a{
-
-                        }
-                    }
                 }
             }
         }

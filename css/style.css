@@ -5,6 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
+/* 변수 */
 * {
   box-sizing: border-box;
 }
@@ -104,14 +105,22 @@ body #header .container .nav {
   width: 100%;
   height: 70px;
   display: flex;
-  justify-content: space-between;
+  -moz-align-items: center;
   align-items: center;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 body #header .container .nav .flex {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  -moz-align-items: center;
   align-items: center;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 body #header .container .nav .flex h2 {
   width: 56px;
@@ -130,6 +139,8 @@ body #header .container .nav .flex h2 {
 }
 body #header .container .nav .flex > ul {
   display: flex;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 body #header .container .nav .flex > ul > li {
   position: relative;
@@ -270,7 +281,10 @@ body #header.on {
 body #header.on .container .nav .flex {
   width: 100%;
   display: flex;
+  -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 body #header.on .container .nav .weather {
   display: none;
@@ -452,7 +466,10 @@ body #section2 .aboutme .container {
 }
 body #section2 .aboutme .container .aboutme-wrap {
   display: flex;
-  justify-content: space-evenly;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
   white-space: nowrap;
   line-height: 180%;
 }
@@ -465,9 +482,15 @@ body #section2 .aboutme .container .aboutme-wrap > div.profile {
   padding: 30px 50px;
   background: #fefefe;
   display: flex;
+  -moz-flex-direction: column;
   flex-direction: column;
-  justify-content: center;
+  -moz-align-items: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-justify-content: center;
+  justify-content: center;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
   transform: rotate(-5deg);
 }
 body #section2 .aboutme .container .aboutme-wrap > div.profile .jiw {
@@ -519,6 +542,11 @@ body #section2 .aboutme .container .aboutme-wrap > div.profile .clip img {
     font-size: 12px;
   }
   body #section2 .aboutme .container .aboutme-wrap {
+    display: flex;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-lines: multiple;
+    flex-wrap: wrap;
     flex-direction: column;
     white-space: inherit;
   }
@@ -541,6 +569,7 @@ body #section2 .container .skill-wrap {
   display: -moz-grid;
   grid-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 body #section2 .container .skill-wrap > div {
   position: relative;
@@ -609,8 +638,12 @@ body #section2 .container .skill-wrap > div ul li a {
   line-height: 24px;
   font-weight: 600;
   display: flex;
-  justify-content: space-between;
+  -moz-align-items: center;
   align-items: center;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
   width: 100%;
 }
 body #section2 .container .skill-wrap > div ul li a i {
@@ -650,6 +683,7 @@ body #section2 .container .skill-wrap > div ul li .num .num-progress {
 @media (max-width: 500px) {
   body #section2 .container .skill-wrap {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(230px, 1fr));
   }
 }
 @media (max-width: 475px) {
@@ -680,7 +714,11 @@ body #section3 #project-web .web-area .web-areawrap {
   overflow: hidden;
 }
 body #section3 #project-web .web-area .web-areawrap .web-wrap {
+  display: flex;
+  -moz-align-items: center;
   align-items: center;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 body #section3 #project-web .web-area .web-areawrap .web-wrap li {
   width: 65%;
@@ -690,7 +728,10 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li {
   padding: 0 20px;
   box-shadow: 0 0 5px #4384F7;
   display: flex;
+  -moz-align-items: center;
   align-items: center;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 body #section3 #project-web .web-area .web-areawrap .web-wrap li.on {
   height: 98%;
@@ -821,14 +862,20 @@ body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-
 @media (max-width: 530px) {
   body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a {
     padding: 10px 15px;
+    font-size: 13px;
   }
 }
 @media (max-width: 420px) {
   body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn {
     bottom: 91%;
   }
+}
+@media (max-width: 370px) {
+  body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn {
+    font-size: 11px;
+  }
   body #section3 #project-web .web-area .web-areawrap .web-wrap li .web-text .web-btn a {
-    font-size: 13px;
+    padding: 7px;
   }
 }
 @media (max-width: 1000px) {
@@ -894,8 +941,10 @@ body #section3 .container #project-design .design-wrap {
   display: grid;
   display: -ms-grid;
   display: -moz-grid;
-  grid-gap: 15px;
+  -webkit-box-pack: center;
+  -moz-box-justify-content: center;
   justify-content: center;
+  grid-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   -ms-grid-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-auto-rows: minmax(195px, 350px);
@@ -1028,7 +1077,11 @@ body #footer::before {
 }
 body #footer .container .contact-wrap {
   display: flex;
+  -webkit-box-pack: center;
+  -moz-box-justify-content: center;
   justify-content: center;
+  -webkit-box-lines: single;
+  flex-wrap: nowrap;
 }
 body #footer .container .contact-wrap .contact-form {
   padding: 50px;
