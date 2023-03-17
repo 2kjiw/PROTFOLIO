@@ -30,7 +30,6 @@ body::-webkit-scrollbar-track {
 #loding .shopbars {
   width: 100%;
   display: flex;
-  display: flex;
   -webkit-box-lines: single;
   flex-wrap: nowrap;
 }
@@ -63,7 +62,7 @@ body::-webkit-scrollbar-track {
 }
 #wrap #header #menu {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 55px;
   z-index: 997;
   background: #fefefe;
@@ -102,7 +101,6 @@ body::-webkit-scrollbar-track {
 #wrap #header #menu .menu-lists li.menu-list > div ul {
   background: #f0f0f0;
   display: grid;
-  display: -ms-grid;
   display: -moz-grid;
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   padding-left: 45px;
@@ -167,7 +165,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #header .header-top .container {
   height: 54px;
-  display: flex;
   display: flex;
   -moz-align-items: center;
   align-items: center;
@@ -249,7 +246,6 @@ body::-webkit-scrollbar-track {
   width: 100%;
   height: 50px;
   display: flex;
-  display: flex;
   -moz-align-items: center;
   align-items: center;
   -webkit-box-lines: single;
@@ -321,7 +317,6 @@ body::-webkit-scrollbar-track {
   position: relative;
   top: -15px;
   display: flex;
-  display: flex;
   -webkit-box-pack: center;
   -moz-box-justify-content: center;
   justify-content: center;
@@ -345,7 +340,6 @@ body::-webkit-scrollbar-track {
 #wrap #section2 .container .best-line {
   height: 25px;
   display: flex;
-  display: flex;
   -moz-align-items: center;
   align-items: center;
   -moz-justify-content: space-around;
@@ -355,7 +349,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section2 .container .best-line .title-bars {
   width: 30px;
-  display: flex;
   display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
@@ -375,7 +368,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section2 .container .best-boxs {
   display: flex;
-  display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-lines: multiple;
@@ -393,7 +385,6 @@ body::-webkit-scrollbar-track {
   height: 100%;
 }
 #wrap #section2 .container .best-boxs .best-box .product-box {
-  display: flex;
   display: flex;
   -moz-justify-content: space-around;
   justify-content: space-around;
@@ -430,7 +421,6 @@ body::-webkit-scrollbar-track {
 #wrap #section3 .container .new-line {
   height: 25px;
   display: flex;
-  display: flex;
   -moz-align-items: center;
   align-items: center;
   -moz-justify-content: space-around;
@@ -440,7 +430,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section3 .container .new-line .title-bars {
   width: 30px;
-  display: flex;
   display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
@@ -460,7 +449,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section3 .container .new-boxs {
   display: flex;
-  display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-lines: multiple;
@@ -478,7 +466,6 @@ body::-webkit-scrollbar-track {
   height: 100%;
 }
 #wrap #section3 .container .new-boxs .new-box .product-box {
-  display: flex;
   display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
@@ -515,7 +502,6 @@ body::-webkit-scrollbar-track {
 #wrap #section4 .container .writer-line {
   height: 25px;
   display: flex;
-  display: flex;
   -moz-align-items: center;
   align-items: center;
   -moz-justify-content: space-around;
@@ -525,7 +511,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section4 .container .writer-line .title-bars {
   width: 30px;
-  display: flex;
   display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
@@ -545,7 +530,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #section4 .container .writer-boxs {
   display: flex;
-  display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-lines: multiple;
@@ -563,7 +547,6 @@ body::-webkit-scrollbar-track {
   height: 100%;
 }
 #wrap #section4 .container .writer-boxs .writer-box .product-box {
-  display: flex;
   display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
@@ -588,7 +571,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #footer .container .footer-top {
   display: flex;
-  display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-lines: single;
@@ -602,7 +584,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #footer .container .footer-top ul {
   width: 245px;
-  display: flex;
   display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
@@ -644,7 +625,6 @@ body::-webkit-scrollbar-track {
 #wrap #quick-layer .container .quick-box {
   height: 80px;
   display: flex;
-  display: flex;
   -moz-align-items: center;
   align-items: center;
   -moz-justify-content: space-between;
@@ -684,7 +664,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #headerCart .container {
   display: flex;
-  display: flex;
   -moz-align-items: center;
   align-items: center;
   -webkit-box-lines: single;
@@ -718,14 +697,12 @@ body::-webkit-scrollbar-track {
 }
 #wrap #sectionCart1 .container .cart-boxs .cart-box .cart-top {
   display: flex;
-  display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-lines: single;
   flex-wrap: nowrap;
 }
 #wrap #sectionCart1 .container .cart-boxs .cart-box .cart-top .cart-top-left {
-  display: flex;
   display: flex;
   -webkit-box-lines: single;
   flex-wrap: nowrap;
@@ -749,7 +726,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #sectionCart1 .container .cart-boxs .cart-box .cart-bottom {
   display: flex;
-  display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-lines: single;
@@ -763,7 +739,6 @@ body::-webkit-scrollbar-track {
   background: #f0f0f0;
   border: 2px solid #fcb712;
   border-radius: 3px;
-  display: flex;
   display: flex;
   -moz-align-items: center;
   align-items: center;
@@ -783,7 +758,6 @@ body::-webkit-scrollbar-track {
 #wrap #sectionCart1 .container .cart-boxs .cart-box .cart-bottom .more-box .plmi-box a {
   color: #fcb712;
   height: 100%;
-  display: flex;
   display: flex;
   -moz-align-items: center;
   align-items: center;
@@ -817,7 +791,6 @@ body::-webkit-scrollbar-track {
 }
 #wrap #sectionCart2 .container .calculation-box span {
   font-size: 16px;
-  display: flex;
   display: flex;
   -moz-justify-content: space-between;
   justify-content: space-between;

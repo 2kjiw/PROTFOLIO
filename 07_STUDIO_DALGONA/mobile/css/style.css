@@ -101,7 +101,6 @@ body::-webkit-scrollbar-track {
 #wrap #header #menu .menu-lists li.menu-list > div ul {
   background: #f0f0f0;
   display: grid;
-  display: -ms-grid;
   display: -moz-grid;
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   padding-left: 45px;

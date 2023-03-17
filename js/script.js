@@ -75,11 +75,10 @@ $(function(){
     let design=$('.design-wrap>li');
     let bigde=$('.bigdeproject');
     let bigdeimg=$('.bigdeproject>.bigdeproject-wrap');
-    let closeBtn=$('.bigdeproject');
-
+    let closeBtn=$('.bigdeproject-wrap>.nonebg');
     design.click(function(e){
         let tg=$(this);
-        let i=tg.index()
+        let i=tg.index();
 
         e.preventDefault();
         bigde.fadeIn();
